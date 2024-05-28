@@ -3,13 +3,13 @@ import classNames from "classnames";
 
 const buttonStyles = {
   primary:
-    "bg-transparent hover:bg-primary-700 text-white font-semibold py-2 px-6 rounded-full",
+    "bg-secondary-600 shadow-xl hover:bg-secondary-700 text-white font-semibold py-2 px-6 rounded-full",
   secondary:
-    "bg-contrast-500 hover:bg-contrast-700 text-white font-semibold py-2 px-6 rounded-full",
+    "bg-secondary-500 hover:bg-secondary-600 text-white font-semibold py-2 px-6 rounded-full",
   tertiary:
-    "bg-transparent hover:bg-primary-100 text-primary-500 font-semibold py-2 px-6 rounded-full",
+    "bg-transparent hover:bg-primary-100 text-white font-semibold py-2 px-6 rounded-full",
   quaternary:
-    "bg-white hover:bg-gray-100 text-black font-semibold py-2 px-6 rounded-full",
+    "bg-white shadow-xl hover:bg-gray-300 text-black font-semibold py-2 px-6 rounded-full",
   // se pueden agregar más variantes acá
 };
 
