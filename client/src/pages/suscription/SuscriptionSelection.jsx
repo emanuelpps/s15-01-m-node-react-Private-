@@ -2,9 +2,9 @@ import { MdCheckCircleOutline } from "react-icons/md";
 import Buttons from "../../components/Buttons";
 function SuscriptionSelection() {
   return (
-    <div id="suscription-selection">
-      <div className="flex gap-[35px]">
-        <div className="bg-[#BEC3C9] p-5 w-[428px] h-[376px] rounded-[10px] border-[1px] hover:border-[#F7786B] hover:border-2">
+    <div id="suscription-selection" className="w-[300px] md:w-full">
+      <div className="flex flex-col md:flex-row gap-[35px] justify-center items-center">
+        <div className="bg-[#BEC3C9] p-5 md:w-[428px] md:h-[376px] rounded-[10px] border-[1px] hover:border-[#F7786B] hover:border-2">
           <div className="text-center">
             <h2 className="text-xl font-medium leading-[32px]">
               Prueba gratis
@@ -33,7 +33,7 @@ function SuscriptionSelection() {
             <Buttons variant="primary"> Elige este plan </Buttons>
           </div>
         </div>
-        <div className="bg-[#BEC3C9] p-5 w-[428px] h-[376px] rounded-[10px] border-[1px] hover:border-[#F7786B] hover:border-2">
+        <div className="bg-[#BEC3C9] p-5 md:w-[428px] md:h-[376px] rounded-[10px] border-[1px] hover:border-[#F7786B] hover:border-2">
           <div className="text-center">
             <h2 className="text-xl font-medium leading-[32px]">
               Suscripción mensual
@@ -62,7 +62,7 @@ function SuscriptionSelection() {
             <Buttons variant="primary"> Elige este plan </Buttons>
           </div>
         </div>
-        <div className="bg-[#BEC3C9] p-5 w-[428px] h-[376px] rounded-[10px] border-[1px] hover:border-[#F7786B] hover:border-2">
+        <div className="bg-[#BEC3C9] p-5 md:w-[428px] md:h-[376px] rounded-[10px] border-[1px] hover:border-[#F7786B] hover:border-2">
           <div className="text-center">
             <h2 className="text-xl font-medium leading-[32px]">
               Suscripción anual
@@ -93,7 +93,9 @@ function SuscriptionSelection() {
         </div>
       </div>
       <div className="flex justify-center items-center mt-10 mb-10">
-        <Buttons variant="primary" className="font-thin">Continuar</Buttons>
+        <Buttons variant="primary" className="font-thin">
+          Continuar
+        </Buttons>
       </div>
     </div>
   );

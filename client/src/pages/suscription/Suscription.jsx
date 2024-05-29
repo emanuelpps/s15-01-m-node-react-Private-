@@ -6,7 +6,7 @@ function Suscription() {
   return (
     <div
       id="suscription-container"
-      className="flex flex-col w-full bg-[#2C3E50] justify-center items-center bg"
+      className="flex flex-col w-full bg-[#2C3E50] justify-center items-center overflow-x-hidden"
     >
       <SuscriptionHeader />
       <SuscriptionSelection />
