@@ -12,7 +12,7 @@ const BannerOptions = () => {
         </h2>
       </div>
       <div className="flex justify-center items-center">
-        <img className="w-3/4 md:w-full" src={imageOptions} alt="imagen" />
+        <img className="w-1/2 md:w-3/4" src={imageOptions} alt="imagen" />
       </div>
     </div>
   );

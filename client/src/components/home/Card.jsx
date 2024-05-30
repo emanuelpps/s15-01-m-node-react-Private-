@@ -16,7 +16,7 @@ const Card = () => {
       {cards.map((card) => (
         <div
           key={card.id}
-          className="bg-white/80 pb-4 rounded w-64 flex-shrink-0"
+          className="bg-white/80 pb-4 rounded w-[290px] flex-shrink-0"
         >
           <div className="rounded-lg overflow-hidden h-auto">
             <span className="bg-white/80">Nuevo lanzamiento</span>
