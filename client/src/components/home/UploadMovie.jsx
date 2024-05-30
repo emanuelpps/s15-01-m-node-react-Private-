@@ -32,7 +32,7 @@ const UploadMovie = () => {
 
         {/* Contenedor Peliculas */}
         <div className="col-span-2 flex justify-center items-center">
-          <div className="md:bg-white pl-2 md:pr-[430px] rounded py-4 md:py-10">
+          <div className="md:bg-white pl-2 md:pr-[500px] rounded py-4 md:py-10">
             <div className="pb-6">
               <span className="text-white md:text-primary-800 font-medium text-2xl">
                 Top Géneros
@@ -49,6 +49,9 @@ const UploadMovie = () => {
               <div className="bg-white md:bg-secondary-400 w-10 md:w-20 h-16"></div>
               <div className="bg-white md:bg-secondary-400 w-10 md:w-20 h-56"></div>
               <div className="bg-white md:bg-secondary-400 w-10 md:w-20 h-36"></div>
+            </div>
+            <div className="flex justify-end text-primary-800 text-[16px] font-normal">
+              Género
             </div>
           </div>
         </div>

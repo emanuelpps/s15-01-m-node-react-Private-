@@ -9,7 +9,7 @@ const Tendency = () => {
       <h2 className="flex justify-center text-white text-center text-xl md:text-2xl font-normal p-4">
         Explorá nuestro contenido destacado
       </h2>
-      <div className="scroll-container overflow-x-auto flex space-x-4 px-2 md:px-20">
+      <div className="scroll-container overflow-x-auto flex md:justify-center mx-2 md:px-20">
         <Card />
       </div>
     </div>

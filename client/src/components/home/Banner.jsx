@@ -8,7 +8,7 @@ const Banner = () => {
         originales
       </span>
 
-      <div className="scroll-container overflow-x-auto flex space-x-4 px-2 md:px-20">
+      <div className="scroll-container overflow-x-auto flex md:justify-center mx-2 md:px-20">
         <Card />
       </div>
     </div>
