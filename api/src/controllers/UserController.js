@@ -25,7 +25,7 @@ export default class UserController {
         try {
             const userData = req.body;
             const newUser = await this.userService.register(userData);
-            res.json({ status: 'success', payload: newUser });
+            res.json({ status: 'success' });
         } catch (error) {
             res.status(500).json({ status: 'error', message: error.message });
         }
