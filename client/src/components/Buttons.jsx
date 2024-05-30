@@ -3,7 +3,11 @@ import classNames from "classnames";
 
 const buttonStyles = {
   primary:
+<<<<<<< HEAD
     "bg-secondary-600 shadow-xl hover:bg-secondary-700 text-white font-semibold py-2 px-6 rounded-full",
+=======
+    "bg-[#F7786B] hover:bg-[#ea7064] text-white font-semibold py-2 px-6 rounded-full font-thin",
+>>>>>>> FRONTEND
   secondary:
     "bg-secondary-500 hover:bg-secondary-600 text-white font-semibold py-4 px-6 rounded-full",
   tertiary:

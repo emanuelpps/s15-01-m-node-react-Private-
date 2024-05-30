@@ -3,7 +3,11 @@ import Root from "./root/Root";
 import ErrorPage from "../pages/ErrorPage";
 import Login from "../pages/login/Login";
 import Register from "../pages/login/Register";
+<<<<<<< HEAD
 import HomePage from "../pages/HomePage";
+=======
+import Suscription from "../pages/suscription/Suscription";
+>>>>>>> FRONTEND
 
 const router = createBrowserRouter([
   {
@@ -27,6 +31,11 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
       },
     ],
+  },
+  {
+    path: "/suscription",
+    element: <Suscription />,
+    children: [{}],
   },
 ]);
 
