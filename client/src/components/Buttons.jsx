@@ -3,7 +3,7 @@ import classNames from "classnames";
 
 const buttonStyles = {
   primary:
-    "bg-transparent hover:bg-primary-700 text-white font-semibold py-2 px-6 rounded-full",
+    "bg-[#F7786B] hover:bg-[#ea7064] text-white font-semibold py-2 px-6 rounded-full font-thin",
   secondary:
     "bg-contrast-500 hover:bg-contrast-700 text-white font-semibold py-2 px-6 rounded-full",
   tertiary:
