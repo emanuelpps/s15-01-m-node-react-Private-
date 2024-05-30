@@ -1,10 +1,12 @@
 const Footer = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 m-10">
-      <span className="text-center font-medium">
-        © 2023 Indie Zone. All Rights Reserved.
+    <div className="flex flex-col py-10 p-0 bg-primary-500 h-auto">
+      <span className="text-center font-normal text-white pb-10">
+        © 2023 Indie Zone. Todos los derechos reservados.
       </span>
-      <span className="text-center font-medium">Privacy Policy</span>
+      <span className="text-center font-normal text-white">
+        Política de privacidad
+      </span>
     </div>
   );
 };

@@ -4,7 +4,7 @@ import { Outlet, ScrollRestoration } from "react-router-dom";
 
 const Root = () => {
   return (
-    <div>
+    <div className="min-h-screen w-full">
       <NavBar />
       <Outlet />
       <ScrollRestoration />

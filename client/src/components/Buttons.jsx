@@ -5,7 +5,7 @@ const buttonStyles = {
   primary:
     "bg-secondary-600 shadow-xl hover:bg-secondary-700 text-white font-semibold py-2 px-6 rounded-full",
   secondary:
-    "bg-secondary-500 hover:bg-secondary-600 text-white font-semibold py-2 px-6 rounded-full",
+    "bg-secondary-500 hover:bg-secondary-600 text-white font-semibold py-4 px-6 rounded-full",
   tertiary:
     "bg-transparent hover:bg-primary-100 text-white font-semibold py-2 px-6 rounded-full",
   quaternary:
