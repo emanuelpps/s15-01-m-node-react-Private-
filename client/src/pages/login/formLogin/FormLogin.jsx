@@ -16,7 +16,7 @@ function FormLogin() {
             Correo electrónico
           </label>
           <input
-            className="shadow bg-transparent appearance-none border rounded w-[400px] py-2 px-2 text-white leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow bg-transparent appearance-none border rounded md:w-[400px] py-2 px-2 text-white leading-tight focus:outline-none focus:shadow-outline"
             id="email"
             type="text"
             placeholder="Email"
@@ -24,7 +24,7 @@ function FormLogin() {
         </div>
         <div className="mb-6 flex flex-col">
           <label className="text-shadow-title text-[#ffff]">Constaseña</label>
-          <div className="shadow bg-transparent appearance-none border rounded w-[400px] py-2 px-2 text-white leading-tight focus:outline-none focus:shadow-outline flex justify-between items-center">
+          <div className="shadow bg-transparent appearance-none border rounded md:w-[400px] py-2 px-2 text-white leading-tight focus:outline-none focus:shadow-outline flex justify-between items-center">
             <input
               id="password"
               type={showPassword ? "text" : "password"}
