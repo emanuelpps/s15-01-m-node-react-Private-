@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["WorkSans", "sans-serif"],
+        sans: ["Poppins", "sans-serif"],
       },
       colors: {
         "primary-50": "#e9e6ee",
