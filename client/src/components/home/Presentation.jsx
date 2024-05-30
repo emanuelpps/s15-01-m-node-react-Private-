@@ -11,7 +11,7 @@ const HomeTitle = () => {
         Descubre y comparte películas y animaciones con el resto del mundo
       </h2>
       <div className="flex justify-center p-6">
-        <Link to="/register">
+        <Link to="/suscription">
           <Buttons variant="secondary">Suscríbete</Buttons>
         </Link>
       </div>
