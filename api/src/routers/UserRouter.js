@@ -1,5 +1,6 @@
 import MyRouter from "./MyRouter.js";
 import UserController from '../controllers/UserController.js'
+//import { verifyJWT } from '../middlewares/verifyJWT.js';
 
 export default class UserRouter extends MyRouter {
     constructor() {
@@ -13,5 +14,9 @@ export default class UserRouter extends MyRouter {
         this.post('/', ["PUBLIC"], async(req, res) => this.userController.create(req, res))
         this.put('/:id', ["PUBLIC"], async(req, res) => this.userController.update(req, res))
         this.delete('/:id', ["PUBLIC"], async(req, res) => this.userController.delete(req, res))
+
+        this.post('/register', ["PUBLIC"], async(req, res) =>await this.userController.register(req, res));
+        this.post('/login', ["PUBLIC"], async(req, res) => await this.userController.login(req, res));
     }
+
 }
