@@ -55,7 +55,7 @@ export default class MyRouter {
 
     handlePolicies = policies => (req, res, next) => {
         if(policies.includes('PUBLIC')) return next()
-        const checkAuth = verifyJWT(req, next)
+        const checkAuth = verifyJWT(req)
         if (checkAuth === true) return next()
         return res.sendNoAuthorizatedError(typeof checkAuth === 'string' ? checkAuth : 'Unauthorizated')
     }
