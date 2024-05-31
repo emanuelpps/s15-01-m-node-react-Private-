@@ -8,6 +8,10 @@
     "start": "node .",
     "dev": "nodemon ."
   },
+  "nodemonConfig": {
+    "watch": ["src", "docs", "*"],
+    "ext": "js,json,yaml"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
