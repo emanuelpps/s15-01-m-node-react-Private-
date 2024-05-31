@@ -2,7 +2,7 @@ import { MdCheckCircleOutline } from "react-icons/md";
 import Buttons from "../../components/Buttons";
 function SuscriptionSelection() {
   return (
-    <div id="suscription-selection" className="w-[300px] md:w-full">
+    <div id="suscription-selection" className="w-[300px] md:w-[100%]">
       <div className="flex flex-col md:flex-row gap-[35px] justify-center items-center">
         <div className="bg-[#BEC3C9] p-5 md:w-[428px] md:h-[376px] rounded-[10px] border-[1px] hover:border-[#F7786B] hover:border-2">
           <div className="text-center">
