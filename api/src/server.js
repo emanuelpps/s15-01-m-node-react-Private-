@@ -13,9 +13,8 @@ class Server {
         this.routes()    
     }
 
-    getConnection() {}
-
-    middlewares() {}
+    // getConnection() {}
+    // middlewares() {}
 
     routes() {
         // this.app.get('/', (req, res) => res.redirect('/api'))

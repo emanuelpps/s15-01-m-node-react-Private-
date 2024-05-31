@@ -1,56 +1,56 @@
 paths:
-  /api/user:
-    get:
-      summary: Obtiene todos los usuarios
-      tags:
-        - User
-      responses:
-        "200":
-          description: Los usuarios fueron devueltos satisfactoriamente
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#components/schemas/User'
-        "500":
-          description: Error del servidor
-  /api/user/{uid}:
-    get:
-      summary: Obtiene un user a partir de su id
-      tags:
-        - User
-      parameters:
-      - name: uid
-        in: path
-        required: true
-        description: ID del usuario que se busca
-        schema:
-          $type: String
-      responses:
-        "200":
-          description: Usuario encontrado
-          content:
-            application/json:
-              schema:
-                $ref: '#components/schemas/User'
-    put:
-      summary: Actualizar un user a partir del ID
-      tags:
-        - User
-      parameters:
-      - name: uid
-        in: path
-        required: true
-        description: ID del usuario que se quiere actualizar
-        schema:
-          $type: String
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#components/requestBodies/updateUser'
+  # /api/user:
+  #   get:
+  #     summary: Obtiene todos los usuarios
+  #     tags:
+  #       - User
+  #     responses:
+  #       "200":
+  #         description: Los usuarios fueron devueltos satisfactoriamente
+  #         content:
+  #           application/json:
+  #             schema:
+  #               type: array
+  #               items:
+  #                 $ref: '#components/schemas/User'
+  #       "500":
+  #         description: Error del servidor
+  # /api/user/{uid}:
+  #   get:
+  #     summary: Obtiene un user a partir de su id
+  #     tags:
+  #       - User
+  #     parameters:
+  #     - name: uid
+  #       in: path
+  #       required: true
+  #       description: ID del usuario que se busca
+  #       schema:
+  #         $type: String
+  #     responses:
+  #       "200":
+  #         description: Usuario encontrado
+  #         content:
+  #           application/json:
+  #             schema:
+  #               $ref: '#components/schemas/User'
+  #   put:
+  #     summary: Actualizar un user a partir del ID
+  #     tags:
+  #       - User
+  #     parameters:
+  #     - name: uid
+  #       in: path
+  #       required: true
+  #       description: ID del usuario que se quiere actualizar
+  #       schema:
+  #         $type: String
+  #     requestBody:
+  #       required: true
+  #       content:
+  #         application/json:
+  #           schema:
+  #             $ref: '#components/requestBodies/updateUser'
   /api/user/register:
     post:
       tags:
