@@ -1,16 +1,15 @@
 import jwt from 'jsonwebtoken';
 
-export const verifyJWT = (req, res, next) => {
+export const verifyJWT = (req) => {
     try {
         const { authorization } = req.headers;
         if (!authorization) {
             throw new Error('No authorization header in the request');
         }
-        const token = authorization.split(' ')[1];
-        const payload = jwt.verify(token, process.env.JWT_SECRET);
+        const payload = jwt.verify(authorization, process.env.JWT_SECRET);
         req.user = payload; // Optionally, attach the payload to the request object
-        next();
+        return true;
     } catch (error) {
-        return res.status(400).json({ error: "JWT", message: error.message }).end();
+        return error.message;
     }
 };

@@ -1,4 +1,5 @@
 import { Router } from "express"
+import { verifyJWT } from "./../middlewares/verifyJWT.js"
 
 export default class MyRouter {
     constructor() {
@@ -54,6 +55,8 @@ export default class MyRouter {
 
     handlePolicies = policies => (req, res, next) => {
         if(policies.includes('PUBLIC')) return next()
-        return res.sendNoAuthorizatedError('Unauthorizated')
+        const checkAuth = verifyJWT(req)
+        if (checkAuth === true) return next()
+        return res.sendNoAuthorizatedError(typeof checkAuth === 'string' ? checkAuth : 'Unauthorizated')
     }
 }
