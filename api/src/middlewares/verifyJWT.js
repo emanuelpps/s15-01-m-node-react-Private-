@@ -10,6 +10,6 @@ export const verifyJWT = (req) => {
         req.user = payload; // Optionally, attach the payload to the request object
         return true;
     } catch (error) {
-        return false;
+        return error.message;
     }
 };
