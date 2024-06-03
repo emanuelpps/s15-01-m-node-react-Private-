@@ -8,7 +8,16 @@ export default class UserController {
     getAll = async(req, res) => res.sendSuccess(await this.userService.getAll())
     getById = async(req, res) => res.sendSuccess(await this.userService.getById(req.params.id))
     create = async(req, res) => res.sendSuccess(await this.userService.create(req.body))
-    update = async(req, res) => res.sendSuccess(await this.userService.update(req.params.id, req.body))
+    update = async(req, res) => {
+        try {
+            const { id } = req.params;
+            const data = req.body;
+            const updatedUser = await this.userService.update(id, data)
+            res.sendSuccess('User updated successfully');
+        } catch (error) {
+            res.sendServerError(error.message);
+        }
+    }
     delete = async(req, res) => res.sendSuccess(await this.userService.delete(req.params.id))
 
     login = async (req, res) => {
