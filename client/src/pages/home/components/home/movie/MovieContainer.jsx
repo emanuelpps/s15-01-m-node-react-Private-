@@ -12,26 +12,26 @@ function MovieContainer() {
   return (
     <div
       id="movie-container"
-      className="text-white max-w-full md:max-w-full overflow-x-auto justify-center"
+      className="text-white max-w-full md:max-w-full overflow-x-auto justify-center mt-10"
     >
-      <div id="movie-container-title" className="md:ml-10 mb-5">
+      <div id="movie-container-title" className="ml-10 mb-5">
         <h2>Mejores Películas</h2>
       </div>
       <div
         id="movie-container-img"
-        className="flex md:justify-center gap-10 overflow-x-auto"
+        className="flex md:justify-center gap-10 overflow-x-auto scroll-container"
       >
-        <div className="grid grid-cols-2 gap-3 ml-5 mr-5 md:flex md:justify-center md:gap-10">
+        <div className="flex justify-start ml-4 gap-5 md:gap-10">
           {shortFilms.map((shortFilm) => (
             <div
               key={shortFilm.title}
-              className="flex justify-center items-center"
+              className="flex flex-none justify-center items-center w-[calc(50%-1rem)] md:w-auto "
             >
               <div className="flex flex-col">
                 <img
                   src={shortFilm.img}
                   alt={shortFilm.title}
-                  className="h-[180px] md:w-[400px]"
+                  className="w-[300px] md:w-[400px]"
                 />
                 <h3 className="mt-5">{shortFilm.title}</h3>
                 <div className="flex gap-2">
