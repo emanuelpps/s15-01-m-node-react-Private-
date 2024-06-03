@@ -39,7 +39,3 @@ function GenreContainer({ filterGenre, setGenreSelected, genreSelected }) {
 }
 
 export default GenreContainer;
-
-/*{filterGenre.map((genre, index) => (
-          <div key={index}>{genre}</div>
-        ))} */
