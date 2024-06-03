@@ -23,7 +23,7 @@ function SlideContainer() {
               <img
                 src={image.src}
                 alt="sliderImg"
-                className={`object-fill h-[400px] w-[800px] rounded-[20px] ${
+                className={`object-fill w-[300px] md:h-[400px] md:w-[800px] rounded-[20px] ${
                   currentSlide === index ? "block" : "hidden"
                 }`}
               />
