@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { MdOutlineHome, MdOutlineAnalytics } from "react-icons/md";
-import { AiOutlineMenu } from "react-icons/ai";
 import { IoSettingsOutline } from "react-icons/io5";
+import TopMenu from "./TopMenu";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,16 +30,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <button
-        onClick={toggleSidebar}
-        aria-controls="logo-sidebar"
-        type="button"
-        className="inline-flex items-center p-2 mt-2 ms-3 text-sm text-white rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-      >
-        <span className="sr-only">Open sidebar</span>
-        <AiOutlineMenu className="w-8 h-8" aria-hidden="true" />
-      </button>
-
+      <TopMenu toggleSidebar={toggleSidebar} />
       <div
         ref={sidebarRef}
         id="logo-sidebar"
@@ -57,7 +48,7 @@ const Sidebar = () => {
           <ul className="space-y-2 font-medium">
             <li>
               <a
-                href="#"
+                href="/"
                 className="flex items-center p-2 rounded-xl text-white hover:bg-primary-600 group"
               >
                 <MdOutlineHome
@@ -70,7 +61,7 @@ const Sidebar = () => {
 
             <li>
               <a
-                href="#"
+                href="/"
                 className="flex items-center p-2 rounded-xl text-white hover:bg-primary-600 group"
               >
                 <MdOutlineAnalytics
@@ -85,7 +76,7 @@ const Sidebar = () => {
 
             <li>
               <a
-                href="#"
+                href="/"
                 className="flex items-center p-2 rounded-xl text-white hover:bg-primary-600 group"
               >
                 <IoSettingsOutline
