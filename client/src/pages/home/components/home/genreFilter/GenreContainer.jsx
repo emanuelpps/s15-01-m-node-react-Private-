@@ -20,7 +20,7 @@ function GenreContainer({ filterGenre, setGenreSelected, genreSelected }) {
         </button>
         {isDropdownOpen && (
           <div className="">
-            <div className="flex flex-col">
+            <div className="flex flex-col w-[100px]  absolute z-10 right-16 bg-[#233b53] rounded-[10px]">
               {filterGenre.map((genre) => (
                 <div
                   key={genre}
