@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import Buttons from "../Buttons";
+import Buttons from "../../components/Buttons";
 
 const HomeTitle = () => {
   return (
     <div className="flex flex-col">
-      <h1 className="text-white text-5xl font-semibold text-center pt-6">
+      <h1 className="text-white text-[56px] uppercase font-semibold text-center pt-6">
         Indie Zone
       </h1>
       <h2 className="font-medium text-2xl text-center text-white p-4">
@@ -12,7 +12,7 @@ const HomeTitle = () => {
       </h2>
       <div className="flex justify-center p-6">
         <Link to="/suscription">
-          <Buttons variant="secondary">Suscríbete</Buttons>
+          <Buttons variant="secondary">Suscríbete Ahora</Buttons>
         </Link>
       </div>
     </div>

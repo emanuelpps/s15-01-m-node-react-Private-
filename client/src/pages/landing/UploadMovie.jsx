@@ -50,7 +50,7 @@ const UploadMovie = () => {
               <div className="bg-white md:bg-secondary-400 w-10 md:w-20 h-56"></div>
               <div className="bg-white md:bg-secondary-400 w-10 md:w-20 h-36"></div>
             </div>
-            <div className="flex justify-end text-primary-800 text-[16px] font-normal">
+            <div className="flex justify-end text-white md:text-primary-800 text-[16px] font-normal">
               Género
             </div>
           </div>

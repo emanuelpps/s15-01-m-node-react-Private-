@@ -4,7 +4,7 @@ import Buttons from "../../components/Buttons";
 const Navbar = () => {
   return (
     <nav className="bg-primary-500 p-6 flex justify-between items-center">
-      <div className="md:text-4xl font-semibold text-white">
+      <div className="md:text-[48px] font-semibold text-white uppercase">
         <Link to="/">Indie Zone</Link>
       </div>
       <div className="md:space-x-4">
