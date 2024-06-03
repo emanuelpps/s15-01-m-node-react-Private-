@@ -15,7 +15,7 @@ function ShortFilmContainer() {
       className="text-white max-w-full md:max-w-full overflow-x-auto justify-center mt-10"
     >
       <div id="short-film-container-title" className="ml-10 mb-5">
-        <h2>Mejores Cortometrajes</h2>
+        <h2 className="font-[600] md:text-[30px]">Mejores Cortometrajes</h2>
       </div>
       <div
         id="short-film-container-img"

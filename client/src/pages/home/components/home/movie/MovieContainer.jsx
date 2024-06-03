@@ -15,7 +15,7 @@ function MovieContainer() {
       className="text-white max-w-full md:max-w-full overflow-x-auto justify-center mt-10"
     >
       <div id="movie-container-title" className="ml-10 mb-5">
-        <h2>Mejores Películas</h2>
+        <h2 className="font-[600] md:text-[30px]">Mejores Películas</h2>
       </div>
       <div
         id="movie-container-img"
