@@ -41,7 +41,7 @@ const Sidebar = () => {
       >
         <div className="h-full px-6 py-8 overflow-y-auto bg-primary-500 rounded-r-lg border-r-2 border-white/25">
           <a href="/" className="flex items-center ps-2.5 mb-16">
-            <span className="self-center text-[32px] font-semibold whitespace-nowrap text-white">
+            <span className="font-vollkorn self-center text-[32px] font-semibold whitespace-nowrap text-white">
               Indie Zone
             </span>
           </a>
@@ -49,26 +49,26 @@ const Sidebar = () => {
             <li>
               <a
                 href="/"
-                className="flex items-center p-2 rounded-xl text-white hover:bg-primary-600 group"
+                className="flex items-center p-2 rounded-xl text-white hover:text-primary-400 group"
               >
                 <MdOutlineHome
                   className="w-6 h-6 text-white transition duration-75  group-hover:text-primary-400"
                   aria-hidden="true"
                 />
-                <span className="ms-3 text-2xl">Inicio</span>
+                <span className="font-merriweather ms-3 text-xl">Inicio</span>
               </a>
             </li>
 
             <li>
               <a
                 href="/"
-                className="flex items-center p-2 rounded-xl text-white hover:bg-primary-600 group"
+                className="flex items-center p-2 rounded-xl text-white hover:text-primary-400 group"
               >
                 <MdOutlineAnalytics
                   className="w-6 h-6 text-white transition duration-75  group-hover:text-primary-400"
                   aria-hidden="true"
                 />
-                <span className="flex-1 ms-3 whitespace-nowrap text-2xl">
+                <span className="font-merriweather flex-1 ms-3 whitespace-nowrap text-xl">
                   Análisis
                 </span>
               </a>
@@ -77,13 +77,13 @@ const Sidebar = () => {
             <li>
               <a
                 href="/"
-                className="flex items-center p-2 rounded-xl text-white hover:bg-primary-600 group"
+                className="flex items-center p-2 rounded-xl text-white hover:text-primary-400 group"
               >
                 <IoSettingsOutline
-                  className="w-6 h-6 text-white transition duration-75  group-hover:text-primary-400"
+                  className="w-6 h-6 text-white transition duration-75 group-hover:text-primary-400"
                   aria-hidden="true"
                 />
-                <span className="flex-1 ms-3 whitespace-nowrap text-2xl">
+                <span className="font-merriweather flex-1 ms-3 whitespace-nowrap text-xl">
                   Configuración
                 </span>
               </a>

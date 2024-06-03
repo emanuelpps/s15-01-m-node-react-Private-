@@ -4,13 +4,13 @@ import Buttons from "../../components/Buttons";
 const HomeTitle = () => {
   return (
     <div className="flex flex-col">
-      <h1 className="text-white text-[56px] uppercase font-semibold text-center pt-6">
+      <h1 className="text-white text-[56px] font-vollkorn font-semibold text-center pt-6">
         Indie Zone
       </h1>
-      <h2 className="font-medium text-2xl text-center text-white p-4">
+      <h2 className="font-medium font-merriweather text-[32px] text-center text-white p-4">
         Descubre y comparte películas y animaciones con el resto del mundo
       </h2>
-      <div className="flex justify-center p-6">
+      <div className="flex justify-center p-6 font-merriweather">
         <Link to="/suscription">
           <Buttons variant="secondary">Suscríbete Ahora</Buttons>
         </Link>

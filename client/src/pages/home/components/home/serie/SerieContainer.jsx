@@ -12,7 +12,7 @@ function SerieContainer() {
   return (
     <div
       id="serie-container"
-      className="text-white max-w-full md:max-w-full overflow-x-auto justify-center mt-10 mb-20"
+      className="font-vollkorn text-white max-w-full md:max-w-full overflow-x-auto justify-center mt-10 mb-20 md:pl-[16rem]"
     >
       <div id="serie-container-title" className="ml-10 mb-5">
         <h2 className="font-[600] md:text-[30px]">Mejores Series</h2>
@@ -27,11 +27,11 @@ function SerieContainer() {
               key={shortFilm.title}
               className="flex flex-none justify-center items-center w-[calc(50%-1rem)] md:w-auto "
             >
-              <div className="flex flex-col">
+              <div className="flex flex-col font-merriweather">
                 <img
                   src={shortFilm.img}
                   alt={shortFilm.title}
-                  className="w-[300px] md:w-[400px]"
+                  className="w-[200px] md:w-[280px]"
                 />
                 <h3 className="mt-5">{shortFilm.title}</h3>
                 <div className="flex gap-2">

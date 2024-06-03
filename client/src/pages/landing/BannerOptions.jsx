@@ -4,10 +4,10 @@ const BannerOptions = () => {
   return (
     <div className="grid md:grid-cols-2">
       <div className="py-10 md:py-36 px-4 md:px-20 pb-1">
-        <h1 className="text-white font-semibold text-2xl md:text-4xl pb-6 text-center">
+        <h1 className="font-vollkorn text-white font-semibold text-2xl md:text-[48px] pb-6 text-center">
           Disfrutá donde quieras
         </h1>
-        <h2 className="text-white text-lg md:text-2xl text-center">
+        <h2 className="text-white text-lg md:text-2xl text-center font-merriweather">
           Cortometrajes y animaciones desde tu teléfono, tablet o computadora
         </h2>
       </div>
