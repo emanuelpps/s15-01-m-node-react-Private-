@@ -46,9 +46,11 @@ function FormLogin() {
           </div>
         </div>
         <div>
-          <Buttons variant="primary" type="submit">
-            Iniciar Sesion
-          </Buttons>
+          <Link to="/home">
+            <Buttons variant="primary" type="submit">
+              Iniciar Sesion
+            </Buttons>
+          </Link>
         </div>
       </form>
       <div className="flex justify-center mt-8">
