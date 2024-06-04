@@ -3,11 +3,12 @@ import img1 from "../../../../../assets/images/testImage/img-1.png";
 import img2 from "../../../../../assets/images/testImage/img-2.png";
 import img3 from "../../../../../assets/images/testImage/img-3.png";
 import star from "../../../../../assets/icons/star.svg";
+import { Link } from "react-router-dom";
 function SerieContainer() {
   const [shortFilms] = useState([
-    { title: "Serie 1", img: img1, stars: 5 },
-    { title: "Serie 2", img: img2, stars: 4 },
-    { title: "Serie 3", img: img3, stars: 5 },
+    { id: 7, title: "Serie 1", img: img1, stars: 5 },
+    { id: 8, title: "Serie 2", img: img2, stars: 4 },
+    { id: 9, title: "Serie 3", img: img3, stars: 5 },
   ]);
   return (
     <div
@@ -23,7 +24,8 @@ function SerieContainer() {
       >
         <div className="flex justify-start ml-4 gap-5 md:gap-10">
           {shortFilms.map((shortFilm) => (
-            <div
+            <Link
+              to={`/details/${shortFilm.id}`}
               key={shortFilm.title}
               className="flex flex-none justify-center items-center w-[calc(50%-1rem)] md:w-auto "
             >
@@ -39,7 +41,7 @@ function SerieContainer() {
                   <p>{shortFilm.stars}</p>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

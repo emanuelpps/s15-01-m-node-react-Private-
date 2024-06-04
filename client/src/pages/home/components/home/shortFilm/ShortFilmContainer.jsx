@@ -3,12 +3,14 @@ import img1 from "../../../../../assets/images/testImage/img-1.png";
 import img2 from "../../../../../assets/images/testImage/img-2.png";
 import img3 from "../../../../../assets/images/testImage/img-3.png";
 import star from "../../../../../assets/icons/star.svg";
+import { Link } from "react-router-dom";
 function ShortFilmContainer() {
   const [shortFilms] = useState([
-    { title: "Serie 1", img: img1, stars: 5 },
-    { title: "Serie 2", img: img2, stars: 4 },
-    { title: "Serie 3", img: img3, stars: 5 },
+    { id: 1, title: "Serie 1", img: img1, stars: 5 },
+    { id: 2, title: "Serie 2", img: img2, stars: 4 },
+    { id: 3, title: "Serie 3", img: img3, stars: 5 },
   ]);
+
   return (
     <div
       id="short-film-container"
@@ -23,9 +25,10 @@ function ShortFilmContainer() {
       >
         <div className="flex justify-start ml-4 gap-5 md:gap-10">
           {shortFilms.map((shortFilm) => (
-            <div
+            <Link
+              to={`/details/${shortFilm.id}`}
               key={shortFilm.title}
-              className="flex flex-none justify-center items-center w-[calc(50%-1rem)] md:w-auto "
+              className="flex flex-none justify-center items-center w-[calc(50%-1rem)] md:w-auto"
             >
               <div className="flex flex-col">
                 <img
@@ -39,7 +42,7 @@ function ShortFilmContainer() {
                   <p>{shortFilm.stars}</p>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

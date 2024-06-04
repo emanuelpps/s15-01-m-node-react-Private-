@@ -4,7 +4,7 @@ import img2 from "../../../../../assets/images/testImage/img-2.png";
 import img3 from "../../../../../assets/images/testImage/img-3.png";
 import star from "../../../../../assets/icons/star.svg";
 import { Link } from "react-router-dom";
-function MovieContainer() {
+function RelatedVideos() {
   const [shortFilms] = useState([
     { id: 4, title: "Serie 1", img: img1, stars: 5 },
     { idt: 5, title: "Serie 2", img: img2, stars: 4 },
@@ -13,10 +13,10 @@ function MovieContainer() {
   return (
     <div
       id="movie-container"
-      className="text-white max-w-full md:max-w-full overflow-x-auto justify-center mt-10"
+      className="text-white max-w-full md:max-w-full overflow-x-auto justify-center mt-20"
     >
       <div id="movie-container-title" className="ml-10 mb-5">
-        <h2 className="font-[600] md:text-[30px]">Mejores Películas</h2>
+        <h2 className="font-[600] md:text-[30px]">Recomendados para ti</h2>
       </div>
       <div
         id="movie-container-img"
@@ -49,4 +49,4 @@ function MovieContainer() {
   );
 }
 
-export default MovieContainer;
+export default RelatedVideos;
