@@ -1,15 +1,15 @@
 const UploadMovie = () => {
   return (
     <div>
-      <h1 className="flex justify-center text-white text-2xl md:text-4xl font-semibold p-10">
+      <h1 className=" font-vollkorn flex justify-center text-white text-2xl md:text-4xl font-semibold p-10">
         Sube tu película
       </h1>
-      <h2 className="flex justify-center text-white text-lg md:text-2xl font-normal px-4 md:px-60 text-center">
+      <h2 className=" font-merriweather flex justify-center text-white text-lg md:text-2xl font-normal px-4 md:px-60 text-center">
         Comparte tu producción con el resto del mundo. En Indi’Zone puedes ver
         el crecimiento de tus producciones
       </h2>
 
-      <div className="md:grid md:grid-cols-2 px-2 md:px-20 py-4 md:py-10 gap-2 md:gap-6">
+      <div className="font-merriweather md:grid md:grid-cols-2 px-2 md:px-20 py-4 md:py-10 gap-2 md:gap-6">
         <div className="flex flex-col bg-white rounded p-4 my-4">
           <span className="text-regular text-lg text-primary-800 font-normal">
             Reproducciones
@@ -56,10 +56,10 @@ const UploadMovie = () => {
           </div>
         </div>
       </div>
-      <h1 className="flex justify-center text-white text-2xl md:text-4xl font-semibold text-center">
+      <h1 className="font-vollkorn flex justify-center text-white text-2xl md:text-4xl font-semibold text-center">
         Valoraciones
       </h1>
-      <h2 className="flex justify-center text-white text-lg md:text-2xl px-4 md:px-60 font-normal p-4 text-center">
+      <h2 className="font-merriweather flex justify-center text-white text-lg md:text-2xl px-4 md:px-60 font-normal p-4 text-center">
         Brindamos el espacio para que los usuarios puedan calificar sus
         cortometrajes y animaciones.
       </h2>

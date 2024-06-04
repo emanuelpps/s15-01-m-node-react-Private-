@@ -14,7 +14,10 @@ function SlideContainer() {
   ]);
   return (
     <>
-      <div id="slide-container" className="flex flex-col w-full mt-10 mb-10">
+      <div
+        id="slide-container"
+        className="flex flex-col w-full mt-10 mb-10 md:pl-[16rem]"
+      >
         <div className="flex flex-row justify-center">
           {slideImages.map((image, index) => (
             <div

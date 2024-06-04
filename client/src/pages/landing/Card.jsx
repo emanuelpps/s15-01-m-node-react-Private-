@@ -16,15 +16,17 @@ const Card = () => {
       {cards.map((card) => (
         <div
           key={card.id}
-          className="bg-white/80 pb-4 rounded w-[290px] flex-shrink-0"
+          className="bg-white/80 pb-4 rounded w-[290px] flex-shrink-0 font-merriweather"
         >
           <div className="rounded-lg overflow-hidden h-auto">
-            <span className="bg-white/80">Nuevo lanzamiento</span>
-            <img
-              alt="content"
-              className="object-cover object-center h-full w-full"
-              src={card.image}
-            />
+            <a href="/home">
+              <span className="bg-white/80">Nuevo lanzamiento</span>
+              <img
+                alt="content"
+                className="object-cover object-center h-full w-full"
+                src={card.image}
+              />
+            </a>
           </div>
           <h2 className="font-normal title-font text-base text-primary-800 mt-2 pl-2">
             {card.title}

@@ -3,7 +3,7 @@ import Card from "./Card";
 const Banner = () => {
   return (
     <div>
-      <span className="flex justify-center text-center text-white text-2xl md:text-5xl my-14 md:px-28">
+      <span className="flex justify-center text-center font-merriweather text-white text-2xl md:text-5xl my-14 md:px-28">
         En Indi’Zone disfrutas de cortometrajes y producciones únicas y
         originales
       </span>

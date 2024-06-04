@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Vollkorn"],
+        vollkorn: ['Vollkorn SC', 'serif'],
+        merriweather: ['Merriweather', 'serif'],
       },
       colors: {
         "primary-50": "##eaecee",
