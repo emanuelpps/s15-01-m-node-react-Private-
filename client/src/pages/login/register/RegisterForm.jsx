@@ -64,15 +64,17 @@ function RegisterForm() {
         </div>
         <div className="flex gap-2  text-[#ffff] text-sm mb-5">
           <p>Ya tienes una cuenta!</p>
-          <Link>Inicia sesión</Link>
+          <Link to="/login">Inicia sesión</Link>
         </div>
         <div className="mb-4">
-          <button
-            className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded"
-            type="submit"
-          >
-            Iniciar Sesion
-          </button>
+          <Link to="/home">
+            <button
+              className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded"
+              type="submit"
+            >
+              Iniciar Sesion
+            </button>
+          </Link>
         </div>
       </form>
     </div>

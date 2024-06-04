@@ -9,6 +9,7 @@ function FormLoginContainer() {
       <h1 className="text-3xl text-shadow-title text-[#ffff]">
         Iniciar Sesión
       </h1>
+
       <FormLogin />
     </div>
   );
