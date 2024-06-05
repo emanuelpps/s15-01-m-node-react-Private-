@@ -18,7 +18,7 @@ function SlideContainer() {
         id="slide-container"
         className="flex flex-col w-full mt-10 mb-10 md:pl-[16rem]"
       >
-        <div className="flex flex-row justify-center">
+        <div className="flex flex-row justify-center relative">
           {slideImages.map((image, index) => (
             <div
               key={index}
