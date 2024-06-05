@@ -33,30 +33,32 @@ function VideoDescription() {
           <div className="mt-5">
             <h3>Elenco</h3>
             <div className="flex gap-5">
-              <div className="flex gap-2">
-                <img src={personImage} />
-                <div className="flex flex-col  justify-center">
+              <div className="flex gap-2 h-full">
+                <img
+                  src={personImage}
+                  className="flex justify-center items-center w-[70px] h-[60px]"
+                />
+                <div className="flex flex-col w-[200px] justify-center">
                   <p>Person Name</p>
                   <p>character name</p>
                 </div>
-              </div>{" "}
-              <div className="flex">
-                <img src={personImage} />
-                <div className="flex flex-col ml-5 justify-center">
+              </div>
+              <div className="flex gap-2 h-full">
+                <img
+                  src={personImage}
+                  className="flex justify-center items-center w-[70px] h-[60px]"
+                />
+                <div className="flex flex-col w-[200px] justify-center">
                   <p>Person Name</p>
                   <p>character name</p>
                 </div>
-              </div>{" "}
-              <div className="flex">
-                <img src={personImage} />
-                <div className="flex flex-col ml-5 justify-center">
-                  <p>Person Name</p>
-                  <p>character name</p>
-                </div>
-              </div>{" "}
-              <div className="flex">
-                <img src={personImage} />
-                <div className="flex flex-col ml-5 justify-center">
+              </div>
+              <div className="flex gap-2 h-full">
+                <img
+                  src={personImage}
+                  className="flex justify-center items-center w-[70px] h-[60px]"
+                />
+                <div className="flex flex-col w-[200px] justify-center">
                   <p>Person Name</p>
                   <p>character name</p>
                 </div>
