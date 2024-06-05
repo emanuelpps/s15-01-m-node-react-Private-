@@ -7,8 +7,8 @@ function Details() {
   const { id } = useParams();
   return (
     <div className=" bg-[#2C3E50]">
-      <VideoDescription />
       <VideoContainer />
+      <VideoDescription />
       <RelatedVideos />
     </div>
   );
