@@ -7,7 +7,7 @@ export default class UserService {
     getById = async (id) => await userModel.findOne({ _id: id });
     create = async (data) => await userModel.create(data);
     update = async (id, data) => await userModel.updateOne({ _id: id }, data);
-    delete = async (id) => await userModel.deleteOne({ _id: id });
+    delete = async (id) => await userModel.updateOne({ _id: id }, { active: false });
 
     async register(userData) {
         const { name, password, email } = userData;
