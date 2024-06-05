@@ -4,21 +4,19 @@ import img2 from "../../../../../assets/images/testImage/img-2.png";
 import img3 from "../../../../../assets/images/testImage/img-3.png";
 import star from "../../../../../assets/icons/star.svg";
 import { Link } from "react-router-dom";
-
-function MovieContainer() {
+function RelatedVideos() {
   const [shortFilms] = useState([
     { id: 4, title: "Serie 1", img: img1, stars: 5 },
     { idt: 5, title: "Serie 2", img: img2, stars: 4 },
     { id: 6, title: "Serie 3", img: img3, stars: 5 },
   ]);
-
   return (
     <div
       id="movie-container"
-      className="font-vollkorn text-white max-w-full md:max-w-full overflow-x-auto justify-center mt-10 md:pl-[16rem]"
+      className="text-white flex flex-col w-full pb-10 md:pl-[16rem] max-w-full md:max-w-full overflow-x-auto justify-center mt-20"
     >
       <div id="movie-container-title" className="ml-10 mb-5">
-        <h2 className="font-[600] md:text-[30px]">Mejores Películas</h2>
+        <h2 className="font-[600] md:text-[30px]">Recomendados para ti</h2>
       </div>
       <div
         id="movie-container-img"
@@ -29,13 +27,13 @@ function MovieContainer() {
             <Link
               to={`/details/${shortFilm.id}`}
               key={shortFilm.title}
-              className="flex flex-none justify-center items-center w-[calc(50%-1rem)] md:w-auto"
+              className="flex flex-none justify-center items-center w-[calc(50%-1rem)] md:w-auto "
             >
-              <div className="flex flex-col font-merriweather">
+              <div className="flex flex-col">
                 <img
                   src={shortFilm.img}
                   alt={shortFilm.title}
-                  className="w-[200px] md:w-[280px]"
+                  className="w-[300px] md:w-[300px]"
                 />
                 <h3 className="mt-5">{shortFilm.title}</h3>
                 <div className="flex gap-2">
@@ -51,4 +49,4 @@ function MovieContainer() {
   );
 }
 
-export default MovieContainer;
+export default RelatedVideos;

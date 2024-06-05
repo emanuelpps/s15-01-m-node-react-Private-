@@ -6,6 +6,7 @@ import Register from "../pages/login/Register";
 import LandingPage from "../pages/LandingPage";
 import Suscription from "../pages/suscription/Suscription";
 import Home from "../pages/home/Home";
+import Details from "../pages/home/features/Details";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: "/home",
         element: <Home/>,
+        errorElement: <ErrorPage />,
+      },      {
+        path: "/details/:id",
+        element: <Details/>,
         errorElement: <ErrorPage />,
       },
     ],
