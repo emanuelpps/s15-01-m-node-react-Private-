@@ -13,7 +13,7 @@ function RelatedVideos() {
   return (
     <div
       id="movie-container"
-      className="text-white max-w-full md:max-w-full overflow-x-auto justify-center mt-20"
+      className="text-white flex flex-col w-full pb-10 md:pl-[16rem] max-w-full md:max-w-full overflow-x-auto justify-center mt-20"
     >
       <div id="movie-container-title" className="ml-10 mb-5">
         <h2 className="font-[600] md:text-[30px]">Recomendados para ti</h2>
@@ -33,7 +33,7 @@ function RelatedVideos() {
                 <img
                   src={shortFilm.img}
                   alt={shortFilm.title}
-                  className="w-[300px] md:w-[400px]"
+                  className="w-[300px] md:w-[300px]"
                 />
                 <h3 className="mt-5">{shortFilm.title}</h3>
                 <div className="flex gap-2">

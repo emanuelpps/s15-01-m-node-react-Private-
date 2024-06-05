@@ -4,7 +4,7 @@ function VideoDescription() {
   return (
     <div
       id="video-description"
-      className="flex justify-center items-center pt-10 text-white"
+      className="flex flex-col w-full pt-10 mb-10 md:pl-[16rem] text-white"
     >
       <div className="flex justify-center gap-10">
         <div
