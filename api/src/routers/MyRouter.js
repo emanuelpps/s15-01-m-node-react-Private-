@@ -53,9 +53,9 @@ export default class MyRouter {
         next()
     }
 
-    handlePolicies = policies => (req, res, next) => {
+    handlePolicies = policies => async (req, res, next) => {
         if(policies.includes('PUBLIC')) return next()
-        const checkAuth = verifyJWT(req)
+        const checkAuth = await verifyJWT(req)
         if (checkAuth === true) return next()
         return res.sendNoAuthorizatedError(typeof checkAuth === 'string' ? checkAuth : 'Unauthorizated')
     }
