@@ -10,7 +10,7 @@ function GenreContainer({ filterGenre, setGenreSelected, genreSelected }) {
   };
   return (
     <div id="genre-container" className=" text-white">
-      <div className="flex flex-col justify-end items-end mr-20 ">
+      <div className="flex flex-col justify-end items-end mr-44 ">
         <button
           onClick={() => setIsDropdownOpen(!isDropdownOpen)}
           className="flex justify-center items-center gap-2   bg-[#FFFFFF0D] p-[10px] rounded-[10px]"
