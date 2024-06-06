@@ -12,7 +12,7 @@ const ChangePassword = () => {
   } = useUserStore();
 
   return (
-    <div className="p-2 mx-auto flex flex-col pt-6 px-4 pb-6">
+    <div className="p-2 mx-auto flex flex-col pt-10 px-4 pb-6">
       <div className="bg-primary-500 p-6 rounded-lg flex flex-col items-center">
         <form className="font-merriweather w-full">
           <div className="mb-4">
@@ -55,6 +55,7 @@ const ChangePassword = () => {
             variant="primary"
             type="submit"
             className="w-full p-2 rounded-lg mt-4"
+            fullWidth
           >
             Guardar
           </Buttons>

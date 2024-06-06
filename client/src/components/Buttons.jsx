@@ -3,7 +3,7 @@ import classNames from "classnames";
 
 const buttonStyles = {
   primary:
-    "bg-[#F7786B] hover:bg-[#ea7064] text-white font-semibold py-2 px-6 rounded-full font-thin",
+    "bg-secondary-600 hover:bg-secondary-100 text-white hover:text-primary-200 font-semibold py-2 px-6 rounded-full font-thin",
   secondary:
     "bg-secondary-500 hover:bg-secondary-600 text-white font-semibold py-4 px-6 rounded-full",
   tertiary:
@@ -13,8 +13,10 @@ const buttonStyles = {
   // se pueden agregar más variantes acá
 };
 
-const Buttons = ({ variant, children, onClick }) => {
-  const buttonClass = classNames(buttonStyles[variant]);
+const Buttons = ({ variant, children, onClick, fullWidth }) => {
+  const buttonClass = classNames(buttonStyles[variant], {
+    "w-full": fullWidth,
+  });
 
   return (
     <button className={buttonClass} onClick={onClick}>
@@ -28,10 +30,12 @@ Buttons.propTypes = {
     .isRequired,
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func,
+  fullWidth: PropTypes.bool,
 };
 
 Buttons.defaultProps = {
   onClick: () => {},
+  fullWidth: false,
 };
 
 export default Buttons;

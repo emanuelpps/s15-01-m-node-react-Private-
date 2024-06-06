@@ -2,6 +2,7 @@ import { useState } from "react";
 import ChangePassword from "./ChangePassword";
 import Edit from "./Edit";
 import PersonalInformation from "./PersonalInformation";
+import ChangePlan from "./changeplan/ChangePlan";
 
 const UserProfile = () => {
   const [activeSection, setActiveSection] = useState("edit"); // Estado para controlar la sección activa
@@ -12,8 +13,7 @@ const UserProfile = () => {
 
       {activeSection === "edit" && <Edit />}
       {activeSection === "changePassword" && <ChangePassword />}
-
-      {/* acá agregamos las secciones idioma y cambiar plan cuando esten listas */}
+      {activeSection === "changePlan" && <ChangePlan />}
     </div>
   );
 };
