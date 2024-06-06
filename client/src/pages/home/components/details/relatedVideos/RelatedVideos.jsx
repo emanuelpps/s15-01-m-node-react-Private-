@@ -27,14 +27,14 @@ function RelatedVideos() {
             <Link
               to={`/details/${shortFilm.id}`}
               key={shortFilm.title}
-              className="flex flex-none justify-center items-center w-[calc(50%-1rem)] md:w-auto "
-            >
-              <div className="flex flex-col">
-                <img
-                  src={shortFilm.img}
-                  alt={shortFilm.title}
-                  className="w-[300px] md:w-[300px]"
-                />
+              className="flex flex-none justify-center items-center w-[calc(50%-1rem)] md:w-auto hover:shadow-md rounded-2xl m-5 p-5"
+              >
+                <div className="flex flex-col font-merriweather">
+                  <img
+                    src={shortFilm.img}
+                    alt={shortFilm.title}
+                    className="w-[200px] md:w-[280px] shadow-md"
+                  />
                 <h3 className="mt-5">{shortFilm.title}</h3>
                 <div className="flex gap-2">
                   <img src={star} alt="star" />
