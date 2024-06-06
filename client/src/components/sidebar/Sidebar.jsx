@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { MdOutlineHome, MdOutlineAnalytics } from "react-icons/md";
-import { IoSettingsOutline } from "react-icons/io5";
+import { IoPerson } from "react-icons/io5";
 import TopMenu from "./TopMenu";
 
 const Sidebar = () => {
@@ -76,15 +76,15 @@ const Sidebar = () => {
 
             <li>
               <a
-                href="/"
+                href="/profile"
                 className="flex items-center p-2 rounded-xl text-white hover:text-primary-400 group"
               >
-                <IoSettingsOutline
+                <IoPerson
                   className="w-6 h-6 text-white transition duration-75 group-hover:text-primary-400"
                   aria-hidden="true"
                 />
                 <span className="font-merriweather flex-1 ms-3 whitespace-nowrap text-xl">
-                  Configuración
+                  Perfil
                 </span>
               </a>
             </li>
