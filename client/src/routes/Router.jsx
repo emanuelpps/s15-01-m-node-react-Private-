@@ -7,6 +7,7 @@ import LandingPage from "../pages/LandingPage";
 import Suscription from "../pages/suscription/Suscription";
 import Home from "../pages/home/Home";
 import Details from "../pages/home/features/Details";
+import UserProfile from "../pages/profile/UserProfile";
 
 const router = createBrowserRouter([
   {
@@ -31,19 +32,25 @@ const router = createBrowserRouter([
       },
       {
         path: "/home",
-        element: <Home/>,
+        element: <Home />,
         errorElement: <ErrorPage />,
-      },      {
+      },
+      {
         path: "/details/:id",
-        element: <Details/>,
+        element: <Details />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/suscription",
+        element: <Suscription />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/profile",
+        element: <UserProfile />,
         errorElement: <ErrorPage />,
       },
     ],
-  },
-  {
-    path: "/suscription",
-    element: <Suscription />,
-    children: [{}],
   },
 ]);
 
