@@ -12,7 +12,7 @@ const HomeTitle = () => {
       </h2>
       <div className="flex justify-center p-6 font-merriweather">
         <Link to="/suscription">
-          <Buttons variant="secondary">Suscríbete Ahora</Buttons>
+          <Buttons variant="primary">Suscríbete Ahora</Buttons>
         </Link>
       </div>
     </div>

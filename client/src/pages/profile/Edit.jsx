@@ -57,7 +57,8 @@ const Edit = () => {
           <Buttons
             variant="primary"
             type="submit"
-            className="w-full p-2 rounded-lg mt-4"
+            className="w-full rounded-lg mt-4"
+            fullWidth
           >
             Guardar
           </Buttons>

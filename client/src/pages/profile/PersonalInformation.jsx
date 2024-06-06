@@ -2,11 +2,11 @@ import PropTypes from "prop-types";
 import { IoPerson } from "react-icons/io5";
 import { IoIosArrowForward } from "react-icons/io";
 import { MdOutlinePassword } from "react-icons/md";
-import { GrLanguage } from "react-icons/gr";
+import { RiVipCrownFill } from "react-icons/ri";
 
 const PersonalInformation = ({ setActiveSection }) => {
   return (
-    <div className="w-full md:w-1/3 -p-10">
+    <div className="w-full md:w-2/4 p-10">
       <div
         className="mb-6 p-4 rounded-lg"
         style={{
@@ -24,62 +24,43 @@ const PersonalInformation = ({ setActiveSection }) => {
             <div className="flex items-center hover:text-primary-400 group">
               <IoPerson className="mr-2 w-6 h-6 text-white transition duration-75 group-hover:text-primary-400" />
               <button
-                className="w-full text-left p-3 bg-transparent border-b border-white/30"
+                className="w-full text-left p-3 bg-transparent border-b border-white/30 flex items-center"
                 onClick={() => setActiveSection("edit")}
               >
-                Editar perfil
+                <span className="flex-grow">Editar perfil</span>
+                <IoIosArrowForward className="w-6 h-6" />
               </button>
-              <IoIosArrowForward className="w-6 h-6" />
             </div>
           </li>
 
           {/* Cambiar Contraseña */}
-          <li className="pb-1">
+          <li className="pb-6">
             <div className="flex items-center hover:text-primary-400 group">
               <MdOutlinePassword className="mr-2 w-6 h-6 text-white transition duration-75 group-hover:text-primary-400" />
               <button
-                className="w-full text-left p-3 mb-6 bg-transparent border-b border-white/30"
+                className="w-full text-left p-3 bg-transparent border-b border-white/30 flex items-center"
                 onClick={() => setActiveSection("changePassword")}
               >
-                Cambiar contraseña
+                <span className="flex-grow">Cambiar contraseña</span>
+                <IoIosArrowForward className="w-6 h-6" />
               </button>
-              <IoIosArrowForward className="w-6 h-6" />
-            </div>
-          </li>
-
-          <h2 className="text-sm md:text-[16px] font-semibold font-merriweather pb-2">
-            Idioma
-          </h2>
-
-          {/* Idioma */}
-          <li className="pb-1">
-            <div className="flex items-center hover:text-primary-400 group">
-              <GrLanguage className="mr-2 w-6 h-6 text-white transition duration-75 group-hover:text-primary-400" />
-              <button
-                className="w-full text-left p-3 mb-6 bg-transparent border-b border-white/30"
-                onClick={() => setActiveSection("language")}
-              >
-                Idioma
-              </button>
-              <IoIosArrowForward className="w-6 h-6" />
             </div>
           </li>
 
           <h2 className="text-sm md:text-[16px] font-semibold font-merriweather pb-2">
             Suscripción
           </h2>
-
           {/* Suscripción */}
           <li className="pb-1">
             <div className="flex items-center hover:text-primary-400 group">
-              <IoPerson className="mr-2 w-6 h-6 text-white transition duration-75 group-hover:text-primary-400" />
+              <RiVipCrownFill className="mr-2 w-6 h-6 text-white transition duration-75 group-hover:text-primary-400" />
               <button
-                className="w-full text-left p-3 bg-transparent border-b border-white/30"
-                onClick={() => setActiveSection("subscription")}
+                className="w-full text-left p-3 bg-transparent border-b border-white/30 flex items-center"
+                onClick={() => setActiveSection("changePlan")}
               >
-                Cambiar plan
+                <span className="flex-grow">Cambiar plan</span>
+                <IoIosArrowForward className="w-6 h-6" />
               </button>
-              <IoIosArrowForward className="w-6 h-6" />
             </div>
           </li>
         </ul>
