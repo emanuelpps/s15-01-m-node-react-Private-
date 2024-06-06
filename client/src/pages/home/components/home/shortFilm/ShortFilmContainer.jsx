@@ -4,6 +4,7 @@ import img2 from "../../../../../assets/images/testImage/img-2.png";
 import img3 from "../../../../../assets/images/testImage/img-3.png";
 import star from "../../../../../assets/icons/star.svg";
 import { Link } from "react-router-dom";
+import Tooltip from "../../../../../components/tooltip/Tooltip";
 function ShortFilmContainer() {
   const [shortFilms] = useState([
     { id: 1, title: "Serie 1", img: img1, stars: 5 },
@@ -28,20 +29,43 @@ function ShortFilmContainer() {
             <Link
               to={`/details/${shortFilm.id}`}
               key={shortFilm.title}
-              className="flex flex-none justify-center items-center w-[calc(50%-1rem)] md:w-auto"
+              className="flex flex-none justify-center items-center w-[calc(50%-1rem)] md:w-auto hover:shadow-md rounded-2xl m-5 p-5 relative"
             >
-              <div className="flex flex-col font-merriweather">
-                <img
-                  src={shortFilm.img}
-                  alt={shortFilm.title}
-                  className="w-[200px] md:w-[280px]"
-                />
-                <h3 className="mt-5">{shortFilm.title}</h3>
-                <div className="flex gap-2">
-                  <img src={star} alt="star" />
-                  <p>{shortFilm.stars}</p>
+              <Tooltip
+                content={
+                  <div className="flex flex-col justify-center ml-5">
+                    <h3 className="mt-1">{shortFilm.title}</h3>
+                    <div className="flex gap-2">
+                      <img src={star} alt="star" className="w-[10px]" />
+                      <p>{shortFilm.stars}</p>
+                      </div>
+                      <div>
+                        <p className="text-[0.7rem]">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Ipsam exercitationem eveniet ab optio corrupti
+                          minus asperiores quidem aspernatur culpa iste amet
+                          voluptas facere, natus eligendi temporibus harum
+                          libero eos molestiae?
+                        </p>
+                    </div>
+                  </div>
+                }
+                direction="bottom"
+                delay="500"
+              >
+                <div className="flex flex-col font-merriweather">
+                  <img
+                    src={shortFilm.img}
+                    alt={shortFilm.title}
+                    className="w-[200px] md:w-[280px] shadow-md"
+                  />
+                  <h3 className="mt-5">{shortFilm.title}</h3>
+                  <div className="flex gap-2">
+                    <img src={star} alt="star" />
+                    <p>{shortFilm.stars}</p>
+                  </div>
                 </div>
-              </div>
+              </Tooltip>
             </Link>
           ))}
         </div>

@@ -2,6 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    @apply font-merriweather;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-vollkorn;
+  }
+  label,
+  ::placeholder,
+  input {
+    @apply font-merriweather;
+  }
+
+  button{
+    @apply font-merriweather;
+  }
+
+  span{
+    @apply font-merriweather;
+  }
+}
+
 .scroll-container {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
