@@ -13,3 +13,5 @@ try {
 } catch (err) {
     console.log(`⛔ Error while trying to connect to the DB. \nDetails: ${err.message}`)
 }
+
+export default app
