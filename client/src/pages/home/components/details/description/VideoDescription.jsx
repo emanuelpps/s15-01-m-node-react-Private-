@@ -7,7 +7,7 @@ function VideoDescription() {
       className="flex flex-col w-full pt-10 mb-10 md:pl-[16rem] text-white overflow-x-hidden"
     >
       <div className="flex flex-col md:flex-row justify-center items-center gap-10">
-        <div id="video-details" className="md:w-[50%]">
+        <div id="video-details" className="md:w-[90%]">
           <div>
             <h1>Movie Title</h1>
           </div>
