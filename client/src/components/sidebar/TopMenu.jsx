@@ -49,8 +49,11 @@ const TopMenu = ({ toggleSidebar }) => {
           />
           <HiOutlineSearch className="absolute right-3 top-1/2 transform -translate-y-1/2 text-white h-4 w-4" />
         </div>
-
-        <IoCloudUploadOutline className="w-8 h-8 hidden md:block" />
+        <div>
+          <Link to={"/upload-video"}>
+            <IoCloudUploadOutline className="w-8 h-8 hidden md:block" />
+          </Link>
+        </div>
         <img
           src={avatar1}
           alt="Avatar"
