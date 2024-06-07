@@ -1,6 +1,6 @@
 import dotenv from 'dotenv'
 import mongoose from 'mongoose'
-import Server from "./server.js"
+import Server from "./src/server.js"
 dotenv.config()
 
 try {
