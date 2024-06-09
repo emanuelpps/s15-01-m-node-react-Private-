@@ -8,6 +8,7 @@ import Suscription from "../pages/suscription/Suscription";
 import Home from "../pages/home/Home";
 import Details from "../pages/home/features/Details";
 import UserProfile from "../pages/profile/UserProfile";
+import Analysis from "../pages/analysis/Analysis";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,11 @@ const router = createBrowserRouter([
       {
         path: "/profile",
         element: <UserProfile />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/analisis",
+        element: <Analysis />,
         errorElement: <ErrorPage />,
       },
     ],
