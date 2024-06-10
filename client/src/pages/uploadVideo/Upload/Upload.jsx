@@ -8,13 +8,13 @@ function Upload() {
   };
 
   return (
-    <div className="flex items-start justify-start text-white ml-20  bg-[#2C3E50] mt-10">
-      <div className="flex flex-col items-center justify-between input-bg-gradient  p-20">
+    <div className="flex items-start justify-start text-white  md:ml-20  bg-[#2C3E50] mt-10">
+      <div className="flex flex-col items-center justify-between input-bg-gradient  rounded-lg p-20">
         <label
           htmlFor="file"
-          className="flex flex-col justify-center items-center cursor-pointer "
+          className="flex flex-col justify-center items-center cursor-pointer"
         >
-          <h3 className="text-white">{asset ? asset : <RiUpload2Line />}</h3>
+          <h3 className="text-white">{asset ? asset : <RiUpload2Line  className="text-[30px]"/>}</h3>
           <div className="bg-transparent">
             <span>Subir video</span>
           </div>
