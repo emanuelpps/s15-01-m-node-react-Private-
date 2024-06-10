@@ -3,12 +3,12 @@ import star from "../../../assets/icons/star.svg";
 
 function Table() {
   return (
-    <div id="table-container" className="text-white ml-20">
+    <div id="table-container" className="text-white ml-20 ">
       <div id="table-filter" className="flex">
         <MdFilterList />
         Filtro
       </div>
-      <table className="table-auto flex flex-col">
+      <table className="table-auto flex flex-col  overflow-x-auto scroll-container ">
         <thead>
           <tr className="flex">
             <th className="border-r-2 pr-5 w-60 pb-5">Videos</th>
