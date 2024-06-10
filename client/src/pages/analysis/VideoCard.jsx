@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 const VideoCard = ({ title }) => {
   return (
-    <div className="bg-primary-500 text-white p-4 m-6 border border-white rounded-md flex-1">
+    <div className="bg-[rgba(255,255,255,0.08)] text-white p-4 my-2 md:mx-4 border border-white rounded-md flex-1">
       <span className="text-lg font-semibold mb-4">{title}</span>
       <div className="flex justify-between mt-4">
         <span>Video</span>

@@ -21,7 +21,7 @@ const TopMenu = ({ toggleSidebar }) => {
         <AiOutlineMenu className="w-8 h-8" aria-hidden="true" />
       </button>
 
-      <ul className="hidden md:flex space-x-4 pl-80 font-merriweather">
+      <ul className="hidden md:flex space-x-12 pl-80 font-merriweather">
         <li>
           <Link to="/cortometrajes" className="text-2xl hover:text-primary-400">
             Cortometrajes
