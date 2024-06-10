@@ -23,7 +23,7 @@ function FormLogin() {
           />
         </div>
         <div className="mb-6 flex flex-col">
-          <label className="text-shadow-title text-[#ffff]">Constaseña</label>
+          <label className="text-shadow-title text-[#ffff]">Contraseña</label>
           <div className="shadow bg-transparent appearance-none border rounded md:w-[400px] py-2 px-2 text-white leading-tight focus:outline-none focus:shadow-outline flex justify-between items-center">
             <input
               id="password"

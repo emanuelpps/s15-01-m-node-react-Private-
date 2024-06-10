@@ -61,7 +61,7 @@ const Sidebar = () => {
 
             <li>
               <a
-                href="/"
+                href="/analisis"
                 className="flex items-center p-2 rounded-xl text-white hover:text-primary-400 group"
               >
                 <MdOutlineAnalytics
