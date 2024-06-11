@@ -49,7 +49,7 @@ function MovieContainer({ movies }) {
                   <img
                     src={movie.img}
                     alt={movie.title}
-                    className="w-[200px] md:w-[280px] shadow-md rounded"
+                    className="w-[150px] md:w-[280px] shadow-md rounded"
                   />
                   <h3 className="mt-5">{movie.title}</h3>
                   <div className="flex gap-2">

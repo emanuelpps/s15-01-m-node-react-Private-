@@ -47,7 +47,7 @@ function SerieContainer({ series }) {
                   <img
                     src={serie.img}
                     alt={serie.title}
-                    className="w-[200px] md:w-[280px] shadow-md rounded"
+                    className="w-[150px] md:w-[280px] shadow-md rounded"
                   />
                   <h3 className="mt-5">{serie.title}</h3>
                   <div className="flex gap-2">
