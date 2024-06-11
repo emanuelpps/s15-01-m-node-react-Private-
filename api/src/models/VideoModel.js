@@ -23,7 +23,19 @@ const videoSchema = new mongoose.Schema({
     },
     genre: {
         type: String,
-        enum: ['drama', 'suspenso', 'terror'],
+        enum: [
+            'drama', 
+            'suspenso', 
+            'terror', 
+            'musical', 
+            'fantasia', 
+            'comedia', 
+            'documental', 
+            'aventura',
+            'ciencia ficcion',
+            'animacion',
+            'accion'
+        ],
         required: true,
     },
     rating: {
