@@ -19,7 +19,7 @@ function Details() {
 
   return (
     <div className=" bg-[#2C3E50]">
-      <VideoContainer />
+      {videoData && <VideoContainer videoData={videoData} />}
       {videoData && <VideoDescription videoData={videoData} />}
 
       <RelatedVideos />

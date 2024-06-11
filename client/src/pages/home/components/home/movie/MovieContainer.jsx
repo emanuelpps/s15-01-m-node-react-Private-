@@ -23,7 +23,7 @@ function MovieContainer({ movies }) {
         className="flex md:justify-center gap-10 overflow-x-auto scroll-container"
       >
         <div className="flex justify-start ml-4 gap-5 md:gap-10">
-          {moviesData.map((movie) => (
+          {moviesData.slice(0, 3).map((movie) => (
             <Link
               to={`/details/${movie.id}`}
               key={movie.title}

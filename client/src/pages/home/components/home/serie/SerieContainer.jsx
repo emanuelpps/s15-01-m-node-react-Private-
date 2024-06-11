@@ -21,7 +21,7 @@ function SerieContainer({ series }) {
         className="flex md:justify-center gap-10 overflow-x-auto scroll-container"
       >
         <div className="flex justify-start ml-4 gap-5 md:gap-10">
-          {seriesData.map((serie) => (
+          {seriesData.slice(0, 3).map((serie) => (
             <Link
               to={`/details/${serie.id}`}
               key={serie.title}
