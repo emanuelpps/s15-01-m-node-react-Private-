@@ -20,6 +20,35 @@ const videoSchema = new mongoose.Schema({
     title:{
         type: String,
         required: true,
+    },
+    genre: {
+        type: String,
+        enum: ['drama', 'suspenso', 'terror'],
+        required: true,
+    },
+    rating: {
+        type: Number,
+        default: 0,
+    },
+    videoLength: {
+        hours: Number,
+        minutes: Number,
+        seconds: Number,
+    },
+    releaseDate: {
+        type: Date,
+    },
+    cast: {
+        type: mongoose.Schema.Types.Array,
+        default: [],
+    },
+    views: {
+        type: Number,
+        default: 0,
+    },
+    videoType: {
+        type: String,
+        enum: ['cortometraje', 'pelicula', 'serie'],
     }
 });
 mongoose.set("strictQuery", false);
