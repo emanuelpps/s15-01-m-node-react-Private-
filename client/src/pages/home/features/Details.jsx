@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react"; // Importa useState y useEffect
+import { useState, useEffect } from "react";
 import VideoDescription from "../components/details/description/VideoDescription";
 import VideoContainer from "../components/details/videoContainer/VideoContainer";
 import RelatedVideos from "../components/details/relatedVideos/RelatedVideos";

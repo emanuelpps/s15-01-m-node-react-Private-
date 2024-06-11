@@ -51,7 +51,8 @@ const router = createBrowserRouter([
         path: "/profile",
         element: <UserProfile />,
         errorElement: <ErrorPage />,
-      },{
+      },
+      {
         path: "/upload-video",
         element: <UploadVideo />,
         errorElement: <ErrorPage />,

@@ -1,15 +1,33 @@
-import { Link } from "react-router-dom";
-import { HiOutlineEyeOff } from "react-icons/hi";
-import { HiOutlineEye } from "react-icons/hi";
+import { Link, useNavigate } from "react-router-dom";
+import { HiOutlineEyeOff, HiOutlineEye } from "react-icons/hi";
 import Buttons from "../../../components/Buttons";
 import { useState } from "react";
+import useUserStore from "../../../store/useUserStore";
+
 function FormLogin() {
   const [showPassword, setShowPassword] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const login = useUserStore((state) => state.login);
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    login(email, password); // Llamada a login
+    const { currentUser } = useUserStore.getState(); // Obtener el estado actual del usuario
+    console.log("Current user after login:", currentUser);
+    if (currentUser) {
+      navigate("/profile");
+    } else {
+      alert("Usuario o contraseña incorrectos.");
+    }
+  };
+
   return (
     <div id="form-login" className="">
       <form
         className="flex flex-col gap-2 justify-center items-center"
-        action="#"
+        onSubmit={handleSubmit}
       >
         <div className="mb-4 flex flex-col">
           <label className="text-shadow-title text-[#ffff]">
@@ -20,6 +38,8 @@ function FormLogin() {
             id="email"
             type="text"
             placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div className="mb-6 flex flex-col">
@@ -29,8 +49,9 @@ function FormLogin() {
               id="password"
               type={showPassword ? "text" : "password"}
               placeholder="*********"
-              inputMode=""
               className="bg-transparent appearance-none border-none w-full text-white leading-tight focus:outline-none focus:shadow-outline"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
             {showPassword ? (
               <HiOutlineEye
@@ -48,7 +69,7 @@ function FormLogin() {
         <div>
           <Link to="/home">
             <Buttons variant="primary" type="submit">
-              Iniciar Sesion
+              Iniciar Sesión
             </Buttons>
           </Link>
         </div>

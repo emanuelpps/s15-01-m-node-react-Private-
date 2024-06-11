@@ -6,13 +6,15 @@ import { LuPlaySquare } from "react-icons/lu";
 import TopMenu from "./TopMenu";
 import { useLocation } from "react-router-dom";
 
-import avatar1 from "../../assets/images/avatar1.png";
+import useUserStore from "../../store/useUserStore";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const sidebarRef = useRef(null);
   const location = useLocation();
+  const { userData } = useUserStore();
 
+  console.log("userData:", userData);
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
@@ -44,10 +46,10 @@ const Sidebar = () => {
             </span>
           </a>
           <div className="flex flex-col items-center mb-10">
-            <div className="relative w-16 h-16 mb-2">
+            <div className="relative w-16 h-16 mb-2 text-white">
               <img
-                src={avatar1}
-                alt="avatar"
+                src={userData ? userData.avatar : ""}
+                alt="Avatar"
                 className="w-full h-full rounded-full"
               />
             </div>
@@ -112,7 +114,7 @@ const Sidebar = () => {
           <ul className="space-y-2 font-medium">
             <li>
               <a
-                href="/"
+                href="/home"
                 className="flex items-center p-2 rounded-xl text-white hover:text-primary-400 group"
               >
                 <MdOutlineHome

@@ -3,12 +3,13 @@ import ChangePassword from "./ChangePassword";
 import Edit from "./Edit";
 import PersonalInformation from "./PersonalInformation";
 import ChangePlan from "./changeplan/ChangePlan";
-
+import useUserStore from "../../store/useUserStore";
 import { IoIosArrowBack } from "react-icons/io";
 
 const UserProfile = () => {
-  const [activeSection, setActiveSection] = useState("edit");
+  const [activeSection, setActiveSection] = useState("personalInformation");
   const [isMobile, setIsMobile] = useState(false);
+  const { userData } = useUserStore();
 
   useEffect(() => {
     const handleResize = () => {
@@ -27,7 +28,10 @@ const UserProfile = () => {
   return (
     <div className="flex flex-col md:flex-row min-h-screen p-6 bg-primary-500 text-white md:pl-[20rem]">
       {(isMobile && activeSection === "personalInformation") || !isMobile ? (
-        <PersonalInformation setActiveSection={setActiveSection} />
+        <PersonalInformation
+          setActiveSection={setActiveSection}
+          userData={userData}
+        />
       ) : null}
 
       {!isMobile || activeSection !== "personalInformation" ? (
@@ -37,7 +41,7 @@ const UserProfile = () => {
               <IoIosArrowBack className="w-6 h-6" />
             </button>
           )}
-          {activeSection === "edit" && <Edit />}
+          {activeSection === "edit" && <Edit userData={userData} />}
           {activeSection === "changePassword" && <ChangePassword />}
           {activeSection === "changePlan" && <ChangePlan />}
         </div>

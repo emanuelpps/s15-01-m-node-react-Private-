@@ -13,7 +13,12 @@ const buttonStyles = {
   // se pueden agregar más variantes acá
 };
 
-const Buttons = ({ variant, children, onClick, fullWidth }) => {
+const Buttons = ({
+  variant = "primary",
+  children,
+  onClick = () => {},
+  fullWidth = false,
+}) => {
   const buttonClass = classNames(buttonStyles[variant], {
     "w-full": fullWidth,
   });
@@ -26,16 +31,10 @@ const Buttons = ({ variant, children, onClick, fullWidth }) => {
 };
 
 Buttons.propTypes = {
-  variant: PropTypes.oneOf(["primary", "secondary", "tertiary", "quaternary"])
-    .isRequired,
+  variant: PropTypes.oneOf(["primary", "secondary", "tertiary", "quaternary"]),
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func,
   fullWidth: PropTypes.bool,
-};
-
-Buttons.defaultProps = {
-  onClick: () => {},
-  fullWidth: false,
 };
 
 export default Buttons;

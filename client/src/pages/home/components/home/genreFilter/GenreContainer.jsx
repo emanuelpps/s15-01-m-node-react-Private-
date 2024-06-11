@@ -2,7 +2,6 @@
 import { useState } from "react";
 import dropDownArrow from "../../../../../assets/icons/dropDownArrow.svg";
 
-/// traer todos los generos desde la api y mostrarlos en el dropdown, despues agregar logica para enviar ese genero a un store y traer los films de ese genero
 function GenreContainer({ filterGenre, setGenreSelected, genreSelected }) {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 

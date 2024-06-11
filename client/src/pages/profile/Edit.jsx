@@ -1,18 +1,28 @@
 import Buttons from "../../components/Buttons";
-import avatar from "../../assets/images/avatar1.png";
 import { MdOutlineCameraEnhance } from "react-icons/md";
 import useUserStore from "../../store/useUserStore";
 
 const Edit = () => {
-  const { email, firstName, lastName, setEmail, setFirstName, setLastName } =
-    useUserStore();
+  const {
+    email,
+    firstName,
+    lastName,
+    setEmail,
+    setFirstName,
+    setLastName,
+    userData,
+  } = useUserStore();
+
+  // Obtener la URL del avatar del usuario actual
+  const avatarURL = userData ? userData.avatar : "";
 
   return (
     <div className="p-2 mx-auto flex flex-col pt-6 px-4 pb-6">
       <div className="bg-primary-500 p-6 rounded-lg flex flex-col items-center relative">
         <div className="relative w-16 h-16 mb-10">
+          {/* Mostrar avatar correspondiente */}
           <img
-            src={avatar}
+            src={avatarURL}
             alt="avatar"
             className="w-full h-full rounded-full"
           />
