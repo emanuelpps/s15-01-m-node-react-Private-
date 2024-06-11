@@ -21,7 +21,7 @@ function ShortFilmContainer({ shortFilms }) {
         className="flex md:justify-center gap-10 overflow-x-auto scroll-container"
       >
         <div className="flex justify-start ml-4 gap-5 md:gap-10">
-          {shortFilmsData.map((shortFilm) => (
+          {shortFilmsData.slice(0, 3).map((shortFilm) => (
             <Link
               to={`/details/${shortFilm.id}`}
               key={shortFilm.title}

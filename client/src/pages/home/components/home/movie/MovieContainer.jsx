@@ -23,7 +23,7 @@ function MovieContainer({ movies }) {
         className="flex md:justify-center gap-10 overflow-x-auto scroll-container"
       >
         <div className="flex justify-start ml-4 gap-5 md:gap-10">
-          {moviesData.map((movie) => (
+          {moviesData.slice(0, 3).map((movie) => (
             <Link
               to={`/details/${movie.id}`}
               key={movie.title}
@@ -49,7 +49,7 @@ function MovieContainer({ movies }) {
                   <img
                     src={movie.img}
                     alt={movie.title}
-                    className="w-[200px] md:w-[280px] shadow-md rounded"
+                    className="w-[150px] md:w-[280px] shadow-md rounded"
                   />
                   <h3 className="mt-5">{movie.title}</h3>
                   <div className="flex gap-2">

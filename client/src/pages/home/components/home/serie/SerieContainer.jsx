@@ -21,7 +21,7 @@ function SerieContainer({ series }) {
         className="flex md:justify-center gap-10 overflow-x-auto scroll-container"
       >
         <div className="flex justify-start ml-4 gap-5 md:gap-10">
-          {seriesData.map((serie) => (
+          {seriesData.slice(0, 3).map((serie) => (
             <Link
               to={`/details/${serie.id}`}
               key={serie.title}
@@ -47,7 +47,7 @@ function SerieContainer({ series }) {
                   <img
                     src={serie.img}
                     alt={serie.title}
-                    className="w-[200px] md:w-[280px] shadow-md rounded"
+                    className="w-[150px] md:w-[280px] shadow-md rounded"
                   />
                   <h3 className="mt-5">{serie.title}</h3>
                   <div className="flex gap-2">
