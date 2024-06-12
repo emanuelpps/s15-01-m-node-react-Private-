@@ -2,11 +2,11 @@ import PropTypes from "prop-types";
 import { IoPerson } from "react-icons/io5";
 import { IoIosArrowForward } from "react-icons/io";
 import { MdOutlinePassword } from "react-icons/md";
-import { GrLanguage } from "react-icons/gr";
+import { RiVipCrownFill } from "react-icons/ri";
 
-const PersonalInformation = ({ setActiveSection }) => {
+const PersonalInformation = ({ setActiveSection, userData }) => {
   return (
-    <div className="w-full md:w-1/3 -p-10">
+    <div className="w-full md:w-2/4 p-10">
       <div
         className="mb-6 p-4 rounded-lg"
         style={{
@@ -24,65 +24,51 @@ const PersonalInformation = ({ setActiveSection }) => {
             <div className="flex items-center hover:text-primary-400 group">
               <IoPerson className="mr-2 w-6 h-6 text-white transition duration-75 group-hover:text-primary-400" />
               <button
-                className="w-full text-left p-3 bg-transparent border-b border-white/30"
+                className="w-full text-left p-3 bg-transparent border-b border-white/30 flex items-center"
                 onClick={() => setActiveSection("edit")}
               >
-                Editar perfil
+                <span className="flex-grow">Editar perfil</span>
+                <IoIosArrowForward className="w-6 h-6" />
               </button>
-              <IoIosArrowForward className="w-6 h-6" />
             </div>
           </li>
 
-          {/* Cambiar Contraseña */}
+          {/* Cambiar contraseña */}
           <li className="pb-1">
             <div className="flex items-center hover:text-primary-400 group">
               <MdOutlinePassword className="mr-2 w-6 h-6 text-white transition duration-75 group-hover:text-primary-400" />
               <button
-                className="w-full text-left p-3 mb-6 bg-transparent border-b border-white/30"
+                className="w-full text-left p-3 bg-transparent border-b border-white/30 flex items-center"
                 onClick={() => setActiveSection("changePassword")}
               >
-                Cambiar contraseña
+                <span className="flex-grow">Cambiar contraseña</span>
+                <IoIosArrowForward className="w-6 h-6" />
               </button>
-              <IoIosArrowForward className="w-6 h-6" />
             </div>
           </li>
 
-          <h2 className="text-sm md:text-[16px] font-semibold font-merriweather pb-2">
-            Idioma
-          </h2>
-
-          {/* Idioma */}
+          {/* Cambiar plan */}
           <li className="pb-1">
             <div className="flex items-center hover:text-primary-400 group">
-              <GrLanguage className="mr-2 w-6 h-6 text-white transition duration-75 group-hover:text-primary-400" />
+              <RiVipCrownFill className="mr-2 w-6 h-6 text-white transition duration-75 group-hover:text-primary-400" />
               <button
-                className="w-full text-left p-3 mb-6 bg-transparent border-b border-white/30"
-                onClick={() => setActiveSection("language")}
+                className="w-full text-left p-3 bg-transparent border-b border-white/30 flex items-center"
+                onClick={() => setActiveSection("changePlan")}
               >
-                Idioma
+                <span className="flex-grow">Cambiar Plan</span>
+                <IoIosArrowForward className="w-6 h-6" />
               </button>
-              <IoIosArrowForward className="w-6 h-6" />
-            </div>
-          </li>
-
-          <h2 className="text-sm md:text-[16px] font-semibold font-merriweather pb-2">
-            Suscripción
-          </h2>
-
-          {/* Suscripción */}
-          <li className="pb-1">
-            <div className="flex items-center hover:text-primary-400 group">
-              <IoPerson className="mr-2 w-6 h-6 text-white transition duration-75 group-hover:text-primary-400" />
-              <button
-                className="w-full text-left p-3 bg-transparent border-b border-white/30"
-                onClick={() => setActiveSection("subscription")}
-              >
-                Cambiar plan
-              </button>
-              <IoIosArrowForward className="w-6 h-6" />
             </div>
           </li>
         </ul>
+      </div>
+      <div className="text-center">
+        <img
+          src={userData?.avatar || "../../assets/images/avatar1.png"} //probando avatars
+          alt="Avatar"
+          className="rounded-full w-24 h-24 mx-auto mb-4"
+        />
+        <p className="text-lg font-semibold">{userData?.email}</p>
       </div>
     </div>
   );
@@ -90,6 +76,7 @@ const PersonalInformation = ({ setActiveSection }) => {
 
 PersonalInformation.propTypes = {
   setActiveSection: PropTypes.func.isRequired,
+  userData: PropTypes.object,
 };
 
 export default PersonalInformation;

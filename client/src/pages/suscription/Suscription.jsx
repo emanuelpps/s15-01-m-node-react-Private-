@@ -1,4 +1,3 @@
-import SuscriptionFooter from "./SuscriptionFooter";
 import SuscriptionHeader from "./SuscriptionHeader";
 import SuscriptionSelection from "./SuscriptionSelection";
 
@@ -10,7 +9,6 @@ function Suscription() {
     >
       <SuscriptionHeader />
       <SuscriptionSelection />
-      <SuscriptionFooter />
     </div>
   );
 }

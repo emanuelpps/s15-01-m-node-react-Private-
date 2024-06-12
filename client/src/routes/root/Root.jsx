@@ -5,7 +5,7 @@ import Sidebar from "../../components/sidebar/Sidebar";
 
 const Root = () => {
   const location = useLocation();
-  const hideNavBarRoutes = ["/home", "/details", "/profile"];
+  const hideNavBarRoutes = ["/home", "/details", "/profile", "/analisis", "/upload-video"];
   const hideSidebarRoutes = ["/", "/login", "/register", "/suscription"];
 
   const shouldShowNavBar = !hideNavBarRoutes.some((route) =>

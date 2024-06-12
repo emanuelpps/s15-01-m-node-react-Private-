@@ -1,15 +1,32 @@
-import { Link } from "react-router-dom";
-import { HiOutlineEyeOff } from "react-icons/hi";
-import { HiOutlineEye } from "react-icons/hi";
+import { Link, useNavigate } from "react-router-dom";
+import { HiOutlineEyeOff, HiOutlineEye } from "react-icons/hi";
 import Buttons from "../../../components/Buttons";
 import { useState } from "react";
+import useUserStore from "../../../store/useUserStore";
+
 function FormLogin() {
   const [showPassword, setShowPassword] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const login = useUserStore((state) => state.login);
+  const navigate = useNavigate();
+  const userData = useUserStore((state) => state.userData);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    await login(email, password);
+    if (userData) {
+      navigate("/home");
+    } else {
+      alert("Usuario o contraseña incorrectos.");
+    }
+  };
+
   return (
     <div id="form-login" className="">
       <form
         className="flex flex-col gap-2 justify-center items-center"
-        action="#"
+        onSubmit={handleSubmit}
       >
         <div className="mb-4 flex flex-col">
           <label className="text-shadow-title text-[#ffff]">
@@ -20,17 +37,20 @@ function FormLogin() {
             id="email"
             type="text"
             placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div className="mb-6 flex flex-col">
-          <label className="text-shadow-title text-[#ffff]">Constaseña</label>
+          <label className="text-shadow-title text-[#ffff]">Contraseña</label>
           <div className="shadow bg-transparent appearance-none border rounded md:w-[400px] py-2 px-2 text-white leading-tight focus:outline-none focus:shadow-outline flex justify-between items-center">
             <input
               id="password"
               type={showPassword ? "text" : "password"}
               placeholder="*********"
-              inputMode=""
               className="bg-transparent appearance-none border-none w-full text-white leading-tight focus:outline-none focus:shadow-outline"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
             {showPassword ? (
               <HiOutlineEye
@@ -46,11 +66,9 @@ function FormLogin() {
           </div>
         </div>
         <div>
-          <Link to="/home">
-            <Buttons variant="primary" type="submit">
-              Iniciar Sesion
-            </Buttons>
-          </Link>
+          <Buttons variant="primary" type="submit">
+            Iniciar Sesión
+          </Buttons>
         </div>
       </form>
       <div className="flex justify-center mt-8">

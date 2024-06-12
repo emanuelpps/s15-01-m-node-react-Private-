@@ -1,10 +1,11 @@
 /* eslint-disable react/no-unknown-property */
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import sliderImg from "../../../../../assets/images/slideImg.png";
 import rectangle from "../../../../../assets/icons/Rectangle.svg";
 import ellipse from "../../../../../assets/icons/Ellipse.svg";
 import Buttons from "../../../../../components/Buttons";
-function SlideContainer() {
+import { Link } from "react-router-dom";
+function SlideContainer(randomFilms) {
   const [currentSlide, setCurrentSlide] = useState(0);
   //const [imgSelector, setImgSelector] = useState(0);
   const [slideImages] = useState([
@@ -12,6 +13,15 @@ function SlideContainer() {
     { src: sliderImg },
     { src: sliderImg },
   ]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % 3);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
+  console.log(randomFilms);
   return (
     <>
       <div
@@ -19,28 +29,36 @@ function SlideContainer() {
         className="flex flex-col w-full mt-10 mb-10 md:pl-[16rem]"
       >
         <div className="flex flex-row justify-center relative">
-          {slideImages.map((image, index) => (
+          {randomFilms.randomFilms.map((film, index) => (
             <div
               key={index}
               id="slide-img"
-              className="flex flex-row justify-center items-center"
+              className="flex flex-row justify-center items-center relative"
             >
               <img
-                src={image.src}
+                src={film?.wide}
                 alt="sliderImg"
-                className={`object-fill w-[300px] md:h-[400px] md:w-[800px] rounded-[20px] ${
-                  currentSlide === index ? "block" : "hidden"
+                className={`hidden md:flex object-cover ${film.id === 9 || film.id === 12 || film.id === 7 ? "object-top" : "object-center"} md:h-[400px] md:w-[900px] rounded-[20px] ${
+                  currentSlide === index ? "md:block" : "md:hidden"
                 }`}
               />
-              <div
+              <img
+                src={film?.img}
+                alt="sliderImg"
+                className={`flex md:hidden object-cover object-center w-[300px] h-[90%] rounded-[20px] ${
+                  currentSlide === index ? "block md:hidden" : "hidden"
+                }`}
+              />
+              <Link
+                to={`/details/${film.id}`}
                 className={`${
                   currentSlide === index
-                    ? "block absolute left-[30%] pt-[10%]"
+                    ? "block absolute left-[10%] pt-[20%]"
                     : "hidden"
                 }`}
               >
                 <Buttons variant="primary">Ver Trailer</Buttons>
-              </div>
+              </Link>
             </div>
           ))}
         </div>

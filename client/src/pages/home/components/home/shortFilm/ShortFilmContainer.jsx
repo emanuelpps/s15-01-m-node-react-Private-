@@ -1,15 +1,12 @@
-import { useState } from "react";
-import img1 from "../../../../../assets/images/testImage/img-1.png";
-import img2 from "../../../../../assets/images/testImage/img-2.png";
-import img3 from "../../../../../assets/images/testImage/img-3.png";
+import PropTypes from "prop-types";
 import star from "../../../../../assets/icons/star.svg";
 import { Link } from "react-router-dom";
-function ShortFilmContainer() {
-  const [shortFilms] = useState([
-    { id: 1, title: "Serie 1", img: img1, stars: 5 },
-    { id: 2, title: "Serie 2", img: img2, stars: 4 },
-    { id: 3, title: "Serie 3", img: img3, stars: 5 },
-  ]);
+import Tooltip from "../../../../../components/tooltip/Tooltip";
+
+function ShortFilmContainer({ shortFilms }) {
+  const shortFilmsData = shortFilms.filter(
+    (film) => film.tipo === "cortometraje"
+  );
 
   return (
     <div
@@ -24,24 +21,41 @@ function ShortFilmContainer() {
         className="flex md:justify-center gap-10 overflow-x-auto scroll-container"
       >
         <div className="flex justify-start ml-4 gap-5 md:gap-10">
-          {shortFilms.map((shortFilm) => (
+          {shortFilmsData.slice(0, 3).map((shortFilm) => (
             <Link
               to={`/details/${shortFilm.id}`}
               key={shortFilm.title}
-              className="flex flex-none justify-center items-center w-[calc(50%-1rem)] md:w-auto"
+              className="flex flex-none justify-center items-center w-[calc(50%-1rem)] md:w-auto hover:shadow-md rounded-2xl m-5 p-5 relative"
             >
-              <div className="flex flex-col font-merriweather">
-                <img
-                  src={shortFilm.img}
-                  alt={shortFilm.title}
-                  className="w-[200px] md:w-[280px]"
-                />
-                <h3 className="mt-5">{shortFilm.title}</h3>
-                <div className="flex gap-2">
-                  <img src={star} alt="star" />
-                  <p>{shortFilm.stars}</p>
+              <Tooltip
+                content={
+                  <div className="flex flex-col justify-center ml-5 p-2">
+                    <h3 className="mt-1">{shortFilm.title}</h3>
+                    <div className="flex gap-2">
+                      <img src={star} alt="star" className="w-[10px]" />
+                      <p>{shortFilm.star}</p>
+                    </div>
+                    <div>
+                      <p className="text-[0.7rem]">{shortFilm.synopsis}</p>
+                    </div>
+                  </div>
+                }
+                direction="bottom"
+                delay="500"
+              >
+                <div className="flex flex-col font-merriweather">
+                  <img
+                    src={shortFilm.img}
+                    alt={shortFilm.title}
+                    className="w-[200px] md:w-[280px] shadow-md rounded"
+                  />
+                  <h3 className="mt-5">{shortFilm.title}</h3>
+                  <div className="flex gap-2">
+                    <img src={star} alt="star" />
+                    <p>{shortFilm.star}</p>
+                  </div>
                 </div>
-              </div>
+              </Tooltip>
             </Link>
           ))}
         </div>
@@ -49,5 +63,19 @@ function ShortFilmContainer() {
     </div>
   );
 }
+
+ShortFilmContainer.propTypes = {
+  shortFilms: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      titulo: PropTypes.string.isRequired,
+      tipo: PropTypes.string.isRequired,
+      img: PropTypes.string.isRequired,
+      stars: PropTypes.number.isRequired,
+      sinopsis: PropTypes.string.isRequired,
+      puntuación: PropTypes.number.isRequired,
+    })
+  ).isRequired,
+};
 
 export default ShortFilmContainer;

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { HiOutlineEyeOff } from "react-icons/hi";
 import { HiOutlineEye } from "react-icons/hi";
 import { Link } from "react-router-dom";
+import Buttons from "../../../components/Buttons";
 function RegisterForm() {
   const [showPassword, setShowPassword] = useState(false);
   return (
@@ -64,16 +65,13 @@ function RegisterForm() {
         </div>
         <div className="flex gap-2  text-[#ffff] text-sm mb-5">
           <p>Ya tienes una cuenta!</p>
-          <Link to="/login">Inicia sesión</Link>
+          <Link to="/login" className="font-semibold">Inicia sesión</Link>
         </div>
         <div className="mb-4">
           <Link to="/home">
-            <button
-              className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded"
-              type="submit"
-            >
-              Iniciar Sesion
-            </button>
+            <Buttons variant="primary" type="submit">
+              Crear cuenta
+            </Buttons>
           </Link>
         </div>
       </form>
