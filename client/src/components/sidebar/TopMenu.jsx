@@ -17,6 +17,8 @@ const TopMenu = ({ toggleSidebar }) => {
     window.location.href = "/login";
   };
 
+  console.log("User Data:", userData);
+
   return (
     <nav className="bg-primary-500 text-white flex justify-between items-center px-4 py-6">
       <button
@@ -65,7 +67,7 @@ const TopMenu = ({ toggleSidebar }) => {
         </div>
         <div className="relative">
           <img
-            src={userData ? userData.avatar : ""}
+            src={userData?.avatar}
             alt="Avatar"
             className="w-10 h-10 rounded-full hidden md:block cursor-pointer"
             onClick={() => setDropdownOpen(!dropdownOpen)}

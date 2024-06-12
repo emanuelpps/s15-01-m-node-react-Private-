@@ -40,11 +40,10 @@ const Sidebar = () => {
     if (location.pathname === "/analisis") {
       return (
         <>
-          <a href="/" className="flex items-center ps-2.5 mb-16">
-            <span className="font-vollkorn self-center text-[32px] font-semibold whitespace-nowrap text-white">
-              Indie Zone
-            </span>
-          </a>
+          <span className="font-vollkorn self-center text-[32px] font-semibold whitespace-nowrap text-white">
+            Indie Zone
+          </span>
+
           <div className="flex flex-col items-center mb-10">
             <div className="relative w-16 h-16 mb-2 text-white">
               <img
@@ -58,7 +57,7 @@ const Sidebar = () => {
           <ul className="space-y-2 font-medium">
             <li>
               <a
-                href="/"
+                href="/home"
                 className="flex items-center p-2 rounded-xl text-white hover:text-primary-400 group"
               >
                 <LuPlaySquare
@@ -106,7 +105,7 @@ const Sidebar = () => {
     } else {
       return (
         <>
-          <a href="/" className="flex items-center ps-2.5 mb-16">
+          <a href="/home" className="flex items-center ps-2.5 mb-16">
             <span className="font-vollkorn self-center text-[32px] font-semibold whitespace-nowrap text-white">
               Indie Zone
             </span>
