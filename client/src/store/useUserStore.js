@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import users from '../assets/users.json';
+import users from '../../public/assets/users.json';
 
 const useUserStore = create((set) => {
   const storedUser = JSON.parse(localStorage.getItem('user'));
