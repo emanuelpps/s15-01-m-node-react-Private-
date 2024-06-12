@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import data from "../../../../public/assets/data.json";
+import newData from "../../../../public/assets/data.json";
 import GenreContainer from "../components/home/genreFilter/GenreContainer";
 import MovieContainer from "../components/home/movie/MovieContainer";
 import SerieContainer from "../components/home/serie/SerieContainer";
@@ -7,12 +7,12 @@ import ShortFilmContainer from "../components/home/shortFilm/ShortFilmContainer"
 import SlideContainer from "../components/home/slides/SlideContainer";
 
 function HomePage() {
-  const [films, setFilms] = useState(data);
+  const [films, setFilms] = useState(newData);
   const [randomFilms, setRandomFilms] = useState([]);
 
   useEffect(() => {
     updateRandomFilms();
-    setFilms(data);
+    setFilms(newData);
   }, []);
 
   const updateRandomFilms = () => {
@@ -20,10 +20,10 @@ function HomePage() {
       const selectedFilms = [];
       const filmSet = new Set();
       while (filmSet.size < 3) {
-        const randomIndex = Math.floor(Math.random() * data.length);
+        const randomIndex = Math.floor(Math.random() * newData.length);
         if (!filmSet.has(randomIndex)) {
           filmSet.add(randomIndex);
-          selectedFilms.push(data[randomIndex]);
+          selectedFilms.push(newData[randomIndex]);
         }
       }
       return selectedFilms;
@@ -43,6 +43,8 @@ function HomePage() {
     "Romance",
   ]);
   const [genreSelected, setGenreSelected] = useState("");
+
+  console.log(films);
 
   return (
     <div>
