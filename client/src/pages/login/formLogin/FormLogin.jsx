@@ -10,14 +10,13 @@ function FormLogin() {
   const [password, setPassword] = useState("");
   const login = useUserStore((state) => state.login);
   const navigate = useNavigate();
+  const userData = useUserStore((state) => state.userData);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    login(email, password); // Llamada a login
-    const { currentUser } = useUserStore.getState(); // Obtener el estado actual del usuario
-    console.log("Current user after login:", currentUser);
-    if (currentUser) {
-      navigate("/profile");
+    await login(email, password);
+    if (userData) {
+      navigate("/home");
     } else {
       alert("Usuario o contraseña incorrectos.");
     }
@@ -67,11 +66,9 @@ function FormLogin() {
           </div>
         </div>
         <div>
-          <Link to="/home">
-            <Buttons variant="primary" type="submit">
-              Iniciar Sesión
-            </Buttons>
-          </Link>
+          <Buttons variant="primary" type="submit">
+            Iniciar Sesión
+          </Buttons>
         </div>
       </form>
       <div className="flex justify-center mt-8">

@@ -2,7 +2,9 @@ import { create } from 'zustand';
 import users from '../assets/users.json';
 
 const useUserStore = create((set) => {
-  const storedUser = JSON.parse(sessionStorage.getItem('user'));
+  const storedUser = JSON.parse(localStorage.getItem('user'));
+
+  console.log("Stored User:", storedUser);
   
   return {
     users: users,
@@ -21,10 +23,12 @@ const useUserStore = create((set) => {
     setNewPassword: (newPassword) => set({ newPassword }),
     setRepeatPassword: (repeatPassword) => set({ repeatPassword }),
     login: (email, password) => set((state) => {
+      console.log("Attempting login with email:", email, "and password:", password);
     
       const user = state.users.find(user => user.email === email && user.password === password);
       if (user) {
-        sessionStorage.setItem('user', JSON.stringify(user));
+        console.log("User found:", user);
+        localStorage.setItem('user', JSON.stringify(user));
         return { currentUser: user.id, userData: user };
       } else {
         console.log("User not found or incorrect password");
@@ -32,7 +36,7 @@ const useUserStore = create((set) => {
       }
     }),
     logout: () => {
-      sessionStorage.removeItem('user');
+      localStorage.removeItem('user');
       set({ currentUser: null, userData: null });
     },
     updateUserData: (data) => set((state) => ({
@@ -42,4 +46,3 @@ const useUserStore = create((set) => {
 });
 
 export default useUserStore;
-
