@@ -3,18 +3,18 @@
     "id": 1,
     "email": "daveg@gmail.com",
     "password": "123456",
-    "avatar": "src/assets/images/davegrohl_avatar.png"
+    "avatar": "../../public/assets/images/davegrohl_avatar.png"
   },
   {
     "id": 2,
     "email": "liomessi@gmail.com",
     "password": "123456",
-    "avatar": "src/assets/images/messi_avatar.png"
+    "avatar": "../../public/assets/images/messi_avatar.png"
   },
   {
     "id": 3,
     "email": "sebasp@gmail.com",
     "password": "123456",
-    "avatar": "src/assets/images/foto-sebastian.png"
+    "avatar": "../../public/assets/images/foto-sebastian.png"
   }
 ]
