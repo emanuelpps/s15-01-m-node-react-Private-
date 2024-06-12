@@ -11,7 +11,8 @@
     "synopsis": "Un profesor de química con cáncer terminal se asocia con un exalumno para fabricar y vender metanfetamina para asegurar el futuro de su familia.",
     "tipo": "serie",
     "img": "/src/assets/images/BB.png",
-    "trailer": "https://www.youtube.com/watch?v=HhesaQXLuRY"
+    "trailer": "https://www.youtube.com/watch?v=HhesaQXLuRY",
+    "wide": "/src/assets/images/breaking-bad-wide.jpg"
   },
   {
     "id": 2,
@@ -25,7 +26,8 @@
     "synopsis": "Basada en la serie de novelas de George R.R. Martin, esta serie sigue las luchas de varias familias nobles por el control del Trono de Hierro de los Siete Reinos de Westeros.",
     "tipo": "serie",
     "img": "/src/assets/images/got.png",
-    "trailer": "https://www.youtube.com/watch?v=gcTkNV5Vg1E"
+    "trailer": "https://www.youtube.com/watch?v=gcTkNV5Vg1E",
+    "wide": "/src/assets/images/got-wide.jpeg"
   },
   {
     "id": 3,
@@ -39,7 +41,8 @@
     "synopsis": "En los años 80, un niño desaparece en un pequeño pueblo de Indiana. A medida que los amigos y la familia buscan respuestas, son arrastrados a un misterio que involucra experimentos gubernamentales secretos y fuerzas sobrenaturales.",
     "tipo": "serie",
     "img": "/src/assets/images/ST.png",
-    "trailer": "https://www.youtube.com/watch?v=XWxyRG_tckY"
+    "trailer": "https://www.youtube.com/watch?v=XWxyRG_tckY",
+    "wide": "/src/assets/images/st-wide.webp"
   },
   {
     "id": 4,
@@ -53,7 +56,8 @@
     "synopsis": "Esta serie dramatiza la vida de la reina Isabel II desde los años 40 hasta la actualidad, mostrando las intrigas personales y políticas detrás de los eventos que moldearon el siglo XX.",
     "tipo": "serie",
     "img": "/src/assets/images/thecrown.png",
-    "trailer": "https://www.youtube.com/watch?v=JWtnJjn6ng0"
+    "trailer": "https://www.youtube.com/watch?v=JWtnJjn6ng0",
+    "wide": "/src/assets/images/crown.webp"
   },
   {
     "id": 5,
@@ -67,7 +71,8 @@
     "synopsis": "Un ladrón de ideas altamente habilidoso es contratado para realizar un acto de espionaje corporativo mediante la inserción de una idea en la mente de un CEO mientras sueña.",
     "tipo": "pelicula",
     "img": "/src/assets/images/inception.png",
-    "trailer": "https://www.youtube.com/watch?v=YoHD9XEInc0"
+    "trailer": "https://www.youtube.com/watch?v=YoHD9XEInc0",
+    "wide": "/src/assets/images/inseption-wide.webp"
   },
   {
     "id": 6,
@@ -81,7 +86,8 @@
     "synopsis": "Esta película sigue la vida de la poderosa familia de la mafia Corleone, especialmente el patriarca Vito Corleone y su hijo Michael, quien toma las riendas del negocio familiar.",
     "tipo": "pelicula",
     "img": "/src/assets/images/thegodfather.png",
-    "trailer": "https://www.youtube.com/watch?v=sY1S34973zA"
+    "trailer": "https://www.youtube.com/watch?v=sY1S34973zA",
+    "wide": "/src/assets/images/godfather-wide.webp"
   },
   {
     "id": 7,
@@ -95,7 +101,8 @@
     "synopsis": "Un banquero es condenado injustamente por el asesinato de su esposa y su amante y es enviado a Shawshank, una penitenciaría brutal donde forma una amistad poco probable con un compañero de celda que lo ayuda a mantener la esperanza de la libertad.",
     "tipo": "pelicula",
     "img": "/src/assets/images/sueñosdefuga.png",
-    "trailer": "https://www.youtube.com/watch?v=6hB3S9bIaco"
+    "trailer": "https://www.youtube.com/watch?v=6hB3S9bIaco",
+    "wide": "/src/assets/images/the-shawshank-redemption-wide.webp"
   },
   {
     "id": 8,
@@ -109,7 +116,8 @@
     "synopsis": "Batman se enfrenta al Joker, un desquiciado criminal que sume a Gotham City en el caos y amenaza con destruir todo lo que Batman intenta proteger.",
     "tipo": "pelicula",
     "img": "/src/assets/images/thedarknight.png",
-    "trailer": "https://www.youtube.com/watch?v=EXeTwQWrcwY"
+    "trailer": "https://www.youtube.com/watch?v=EXeTwQWrcwY",
+    "wide": "/src/assets/images/batman-wide.webp"
   },
   {
     "id": 9,
@@ -123,7 +131,8 @@
     "synopsis": "Un niño es llevado por su padre y su abuelo a su primera noche de trabajo, que resulta ser algo más allá de lo que había imaginado.",
     "tipo": "cortometraje",
     "img": "/src/assets/images/laluna.png",
-    "trailer": "https://www.youtube.com/watch?v=vbuq7w3ZDUQ"
+    "trailer": "https://www.youtube.com/watch?v=vbuq7w3ZDUQ",
+    "wide": "/src/assets/images/La-Luna-Image-wide.webp"
   },
   {
     "id": 10,
@@ -137,7 +146,8 @@
     "synopsis": "Un pequeño pájaro marino encuentra el coraje para enfrentarse a sus miedos y aprender a alimentarse por sí mismo en la playa.",
     "tipo": "cortometraje",
     "img": "/src/assets/images/piper.png",
-    "trailer": "https://www.youtube.com/watch?v=qAIRXIckfMA"
+    "trailer": "https://www.youtube.com/watch?v=qAIRXIckfMA",
+    "wide": "/src/assets/images/piper-wide.png"
   },
   {
     "id": 11,
@@ -151,7 +161,8 @@
     "synopsis": "Una operadora de una línea de ayuda recibe una llamada inesperada que cambia su vida.",
     "tipo": "cortometraje",
     "img": "/src/assets/images/the-phone-call.png",
-    "trailer": "https://www.youtube.com/watch?v=J_c6IL1Gt6A"
+    "trailer": "https://www.youtube.com/watch?v=tq1BYeCXzEs",
+    "wide": "/src/assets/images/phone-call-evite-wide.webp"
   },
   {
     "id": 12,
@@ -165,6 +176,7 @@
     "synopsis": "La vida amorosa de un hombre vista desde la perspectiva de su perro, Winston, y las comidas que comparte con él.",
     "tipo": "cortometraje",
     "img": "/src/assets/images/feast.png",
-    "trailer": "https://www.youtube.com/watch?v=JunIEmcqCQE"
+    "trailer": "https://www.youtube.com/watch?v=Y8PmYJ7xXGU",
+    "wide": "/src/assets/images/feast-wide.webp"
   }
 ]
