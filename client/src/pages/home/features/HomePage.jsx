@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import data from "../../../assets/data.json";
+import data from "../../../../public/assets/data.json";
 import GenreContainer from "../components/home/genreFilter/GenreContainer";
 import MovieContainer from "../components/home/movie/MovieContainer";
 import SerieContainer from "../components/home/serie/SerieContainer";
